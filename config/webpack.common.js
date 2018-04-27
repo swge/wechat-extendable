@@ -5,7 +5,6 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 var helpers = require('./helpers');
 
 module.exports = {
-    mode: 'production',
 
     entry: {
         'polyfills': './client/polyfills.ts',

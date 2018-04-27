@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build:dev": "webpack --progress --colors --config ./config/webpack.dev.js"
+    "build:dev": "webpack --progress --colors --mode=development --config ./config/webpack.dev.js",
+    "build:prod": "webpack --progress --colors --mode=production --config ./config/webpack.prod.js"
   },
   "dependencies": {
     "@angular/common": "^4.4.7",
