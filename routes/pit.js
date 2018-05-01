@@ -11,18 +11,18 @@ function checkSignature(params){
 
 /* Weixin validation */
 router.get('/', function(req, res, next) {
-  if(!checkSignature(req.params)){
+  if(!checkSignature(req.query)){
     res.end('signature fail');
   } else {
-    res.end(req.params.echostr);
+    res.end(req.query.echostr);
   }
 });
 
 router.post('/', function(req, res) {
-  if(!checkSignature(req.params)){
+  if(!checkSignature(req.query)){
     res.end('signature fail');
   } else {
-    res.end(req.body.xml);
+    res.end('success');
   }
 
 });
