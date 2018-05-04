@@ -18,10 +18,8 @@ function requestAccessToken() {
 }
 
 module.exports = {
-    getAccessToken: function(app) {
-        if(app.accessToken && app.accessToken.expires_at > new Date().getTime()) {
-            return app.accessToken.access_token;
-        } else {
+    getAccessToken: (app) => {
+        if(!app.accessToken || app.accessToken.expires_at < new Date().getTime()) {
             requestAccessToken().then(function(token){
                 var expires_at = new Date().getTime() + token.expires_in * 1000 - 600000;
                 token.expires_at = expires_at;
@@ -30,5 +28,6 @@ module.exports = {
                 console.log(err);
             })
         }
+        return app.accessToken.access_token;
     }
 }
