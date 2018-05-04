@@ -1,0 +1,20 @@
+.user-detail__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .user-detail__avatar {
+        img {
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    .user-detail__name {
+
+    }
+
+    .user-detail__score {
+
+    }
+}
