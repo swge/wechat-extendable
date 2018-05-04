@@ -1,0 +1,12 @@
+.correct-box__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    position: relative;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    padding-top: 10%;
+    background: white;
+}

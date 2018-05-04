@@ -9,6 +9,7 @@ var envConfig = require('./config/env.config');
 
 var indexRouter = require('./routes/index');
 var pitRouter = require('./routes/pit');
+var ttfRouter = require('./routes/ttf');
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use(envConfig.STGW_URL, express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/pit', pitRouter);
+app.use('/ttf', ttfRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

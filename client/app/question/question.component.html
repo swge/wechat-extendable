@@ -1,0 +1,44 @@
+<!-- <div class="ttf-container">
+    <div class="card">
+        <div class="card-left">
+            <div class="card-left-content">
+                <img src="../../assets/img/bg/bg-story.png" alt="photo">
+            </div>
+        </div>
+        <div class="card-right">
+            <div class="card-right-content">
+                <div class="card-post-question">
+                    <p class="card-post-question-item" *ngFor="let question of questions">
+                        <input type="checkbox" id="qus{{question.id}}" />
+                        <label for="qus{{question.id}}">{{question.content}}</label>
+                    </p>
+                </div>
+                <div class="user-tag">
+                    <a href="#" class="article-tag">Liu, Mason</a>
+                    <span>|</span>
+                    <a href="#" class="article-tag">Lao liu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> -->
+<div class="ttf-container">
+    <div class="box-wrapper">
+        <img src="../../assets/img/bg/bg-story.png" alt="photo">
+        <div class="box-content">
+            <div class="title">Liu, Mason</div>
+            <p class="card-post-question-item" *ngFor="let question of questions">
+                "<label class="desc" for="qus{{question.id}}">{{question.content}}</label>"
+            </p>
+            <div class="footer">
+                <ul class="nav-btn">
+                    <li><a href="#"><span>Answer</span></a></li>
+                    <li><a href="#"><span>Question</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <i class="fa fa-lock"></i>
+    <round-winner></round-winner>
+</div>
