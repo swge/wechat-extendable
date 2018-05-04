@@ -15,6 +15,10 @@ var pitRouter = require('./routes/pit');
 var app = express();
 
 //Log
+logger.token('requestBody', function(req, res) {
+    return req.body.xml;
+});
+
 var logDirectory = path.join(__dirname, 'log')
 
 // ensure log directory exists
@@ -27,16 +31,23 @@ var accessLogStream = rfs('access.log', {
   path: logDirectory
 })
 
+app.use(logger(':id :method :url :response-time :requestBody', {stream: accessLogStream}));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-app.use(logger('dev', {stream: accessLogStream}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/pit', xmlParser({explicitArray: false}));
 app.use(envConfig.STGW_URL, express.static(path.join(__dirname, 'public')));
+
+//add app to request
+app.use('/', function(req, res, next) {
+    req.app = app;
+    next();
+});
 
 app.use('/', indexRouter);
 app.use('/pit', pitRouter);
