@@ -1,5 +1,8 @@
 node_modules/
 public/
-log/
+log
+.vscode
+npm-debug.log
 package-lock.json
 views/*.hbs
+.DS_Store

@@ -13,18 +13,32 @@ var indexRouter = require('./routes/index');
 var pitRouter = require('./routes/pit');
 var ttfRouter = require('./routes/ttf');
 
+var winston = require('winston');
+var fs = require('fs');
+var path = require('path');
+var moment = require('moment');
+
+var logDirectory = path.join(__dirname, 'log')
+
+if (!fs.existsSync(logDirectory)) {
+    fs.mkdirSync(logDirectory);
+}
+winston.add(winston.transports.File, {
+    filename: path.join(logDirectory, '/events.log'),
+    timestamp: () => {
+        return moment().format('MM-DD hh:mm:ss')
+    },
+    // 5MB
+    maxsize: 5242880
+});
+
+
 var app = express();
 
 //Log
 logger.token('requestBody', function(req, res) {
     return req.body.xml;
 });
-
-var logDirectory = path.join(__dirname, 'log')
-
-// ensure log directory exists
-fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
-
 // create a rotating write stream
 var accessLogStream = rfs('access.log', {
   maxFiles: 10, // rotate daily
@@ -32,7 +46,7 @@ var accessLogStream = rfs('access.log', {
   path: logDirectory
 })
 
-app.use(logger(':id :method :url :response-time :requestBody', {stream: accessLogStream}));
+app.use(logger(':method :url :response-time :requestBody', {stream: accessLogStream}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -47,6 +61,7 @@ app.use(envConfig.STGW_URL, express.static(path.join(__dirname, 'public')));
 //add app to request
 app.use('/', function(req, res, next) {
     req.app = app;
+    winston.log('info',req.body);
     next();
 });
 
