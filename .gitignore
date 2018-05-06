@@ -5,4 +5,4 @@ log
 npm-debug.log
 package-lock.json
 views/*.hbs
-.DS_Store
+.DS_Store/

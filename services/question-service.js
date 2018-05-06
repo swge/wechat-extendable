@@ -1,0 +1,6 @@
+
+module.exports = {
+    loadQuestions: function() {
+        
+    }
+}
