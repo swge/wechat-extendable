@@ -4,5 +4,4 @@ log
 .vscode
 npm-debug.log
 package-lock.json
-views/*.hbs
 .DS_Store/
