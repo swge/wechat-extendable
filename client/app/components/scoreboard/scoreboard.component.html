@@ -1,3 +1,6 @@
-<div class="scoreboard__container">
-    <user-detail *ngFor="let user of ttfService.finalScore" [user]="user"></user-detail>
+<div class="scoreboard__overlay">
+    <div class="scoreboard__container">
+        <user-detail [user]="{name: 'Name', score: 'Score'}" [index]="'No.'"></user-detail>
+        <user-detail *ngFor="let user of ttfService.finalScore; let i = index" [user]="user" [index]="i + 1"></user-detail>
+    </div>
 </div>

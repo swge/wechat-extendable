@@ -1,0 +1,18 @@
+.scoreboard__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    .scoreboard__container {
+        margin-top: 228px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        padding-top: 20px;
+        background-color: white;
+        box-shadow: 0px 5px 43px rgba( 0, 0, 0, 0.48 );
+    }
+}

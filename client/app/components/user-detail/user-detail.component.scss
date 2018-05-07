@@ -1,8 +1,10 @@
 .user-detail__container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-
+    justify-content: flex-start;
+    padding: 5px;
+    border-bottom: dashed 1px #888;
+    
     .user-detail__avatar {
         img {
             width: 48px;
@@ -10,11 +12,36 @@
         }
     }
 
-    .user-detail__name {
+    .user-detail__index {
+        font-size: 48px;
+        height: 48px;
+        width: 150px;
+        padding-left: 50px;
+        margin-top: -40px;
+    }
 
+    .user-detail__avatar {
+        width: 48px;
+        height: 48px;
+        margin-right: 100px;
+    }
+
+    .user-detail__name {
+        font-size: 26px;
+        height: 48px;
+        flex-grow: 1;
+        // margin-top: -17px;
     }
 
     .user-detail__score {
+        font-size: 48px;
+        height: 48px;
+        width: 150px;
+        margin-top: -40px;
+        padding-right: 50px;
+    }
 
+    &.odd-line {
+        // background-color: #AAA
     }
 }
