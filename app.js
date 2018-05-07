@@ -12,6 +12,7 @@ var envConfig = require('./config/env.config');
 var indexRouter = require('./routes/index');
 var pitRouter = require('./routes/pit');
 var ttfRouter = require('./routes/ttf');
+var questionPlayerRouter = require('./routes/qustionPlayer');
 
 var winston = require('winston');
 var fs = require('fs');
@@ -68,6 +69,7 @@ app.use('/', function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/pit', pitRouter);
 app.use('/ttf', ttfRouter);
+app.use('/questions', questionPlayerRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
