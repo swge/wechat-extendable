@@ -1,0 +1,4 @@
+
+module.exports = {
+    replyTextTempalte: '<xml> <ToUserName>< ![CDATA[{toUser}] ]></ToUserName> <FromUserName>< ![CDATA[{fromUser}] ]></FromUserName> <CreateTime>{time}</CreateTime> <MsgType>< ![CDATA[text] ]></MsgType> <Content>< ![CDATA[{content}] ]></Content> </xml>'
+}

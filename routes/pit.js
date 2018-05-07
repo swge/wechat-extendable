@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var envConfig = require('../config/env.config');
+var routerService = require('../services/pit-router-service');
 
 function checkSignature(params){
   var key=[envConfig.TOKEN,params.timestamp,params.nonce].sort().join(''); 
@@ -22,7 +23,7 @@ router.post('/', function(req, res) {
   if(!checkSignature(req.query)){
     res.end('signature fail');
   } else {
-    res.end('success');
+    res.end(routerService.router(req.body.xml, req.app));
   }
 
 });

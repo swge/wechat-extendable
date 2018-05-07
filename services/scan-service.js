@@ -1,3 +1,4 @@
+var messageService = require('./message-send-service');
 
 module.exports = {
     processScan: function(scan, app) {
@@ -12,7 +13,7 @@ module.exports = {
         }
         //Join Question Game
         if(scan.eventkey === 'JoinQuestionGame') {
-
+            return messageService.replayMessage(scan, '欢迎参加有奖猜猜猜活动！');
         }
     }
 }
