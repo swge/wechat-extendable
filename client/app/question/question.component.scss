@@ -163,24 +163,29 @@
     text-align: center;
     .box-wrapper {
         z-index: 99;
-        display: flex;
-        align-items: center;
+        
         background-color: #fff;
-        overflow: hidden;
+        
         width: 100%;
         min-height:400px;
         box-shadow: 0px 5px 43px rgba( 0, 0, 0, 0.48 );
         padding: 0;
         text-align: center;
         position: relative;
-        left: 50%;
-        top: 250px;
-        transform: translate(-50%,-50%);
+        // left: 50%;
+        top: 52px;
+        // transform: translate(-50%,-50%);
     
         img {
             max-width: 40%;
             min-height: 400px;
             // height: 100%;
+        }
+
+        .question-wrapper {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
         }
     }
     

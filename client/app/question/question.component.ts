@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { TTFService } from '../services/ttf.service';
 
 @Component({
     selector: 'question',
@@ -22,4 +23,15 @@ export class QuestionComponent {
         { id: 3, content: 'Which would you pick: being world-class attractive, a genius or famous for doing something great'  },
     ];
 
+    constructor(private ttfService: TTFService) {
+
+    }
+
+    public showAnswer(): void {
+        this.ttfService.getRoundWinners();
+    }
+
+    public nextQuestion(): void {
+        this.ttfService.resetRoundWinners();
+    }
 }

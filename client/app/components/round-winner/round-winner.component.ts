@@ -12,6 +12,6 @@ export class RoundWinnerComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.ttfService.getRoundWinners();
+        // this.ttfService.getRoundWinners();
     }
 }

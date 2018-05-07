@@ -1,12 +1,24 @@
-.correct-box__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.round-winners__container {
+    
 
-    position: relative;
-    width: 90%;
+    // position: relative;
+    // width: 90%;
     text-align: center;
     margin: auto;
-    padding-top: 10%;
+    padding-top: 20px;
     background: white;
+
+    .round-winners__title {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-family: 'Acme', cursive;
+        color: #ca4966;
+    }
+
+    .round-winners__user-view {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }

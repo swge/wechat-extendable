@@ -1,4 +1,8 @@
-<div class="correct-box__container">
+<div *ngIf="ttfService.roundWinners != null" class="round-winners__container">
+    <div class="round-winners__title">Round Winners</div>
     <!-- <h2> -->
-    <user-icon *ngFor="let user of ttfService.roundWinners" [user]="user"></user-icon>
+    <div class="round-winners__user-view">
+        <user-icon *ngFor="let user of ttfService.roundWinners" [user]="user"></user-icon>
+    </div>
+    
 </div>

@@ -25,20 +25,23 @@
 </div> -->
 <div class="ttf-container">
     <div class="box-wrapper">
-        <img src="../../assets/img/bg/bg-story.png" alt="photo">
-        <div class="box-content">
-            <div class="title">Liu, Mason</div>
-            <p class="card-post-question-item" *ngFor="let question of questions">
-                "<label class="desc" for="qus{{question.id}}">{{question.content}}</label>"
-            </p>
-            <div class="footer">
-                <ul class="nav-btn">
-                    <li><a href="#"><span>Answer</span></a></li>
-                    <li><a href="#"><span>Question</span></a></li>
-                </ul>
+        <div class="question-wrapper">
+            <img src="../../assets/img/bg/bg-story.png" alt="photo">
+            <div class="box-content">
+                <div class="title">Liu, Mason</div>
+                <p class="card-post-question-item" *ngFor="let question of questions">
+                    "<label class="desc" for="qus{{question.id}}">{{question.content}}</label>"
+                </p>
+                <div class="footer">
+                    <ul class="nav-btn">
+                        <li><a href="javascript:void(0)" (click)="showAnswer()"><span>Answer</span></a></li>
+                        <li><a href="javascript:void(0)" (click)="nextQuestion()"><span>Question</span></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <round-winner></round-winner>
     </div>
     <i class="fa fa-lock"></i>
-    <round-winner></round-winner>
+    
 </div>
