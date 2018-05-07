@@ -2,6 +2,10 @@
 
 module.exports = {
     answerQuestion: (msg, app) => {
-        var data = app.questionGameData;
+        var data;
+        if(!app.questionGameData){
+            app.questionGameData = {};
+        }
+        data = app.questionGameData;
     }
 }
