@@ -1,5 +1,6 @@
-<div class="user-detail__container">
-    <div class="user-detail__avatar"><img [src]="user.avatar" alt=""></div>
+<div class="user-detail__container" [class.odd-line]="index%2===1">
+    <div class="user-detail__index">{{index}}</div>
+    <div class="user-detail__avatar"><img *ngIf="user.avatar" [src]="user.avatar" alt=""></div>
     <div class="user-detail__name">{{user.name}}</div>
     <div class="user-detail__score">{{user.score}}</div>
 </div>

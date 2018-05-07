@@ -12,4 +12,7 @@ export class UserDetailComponent {
         name: 'Jerry Wang',
         score: 5
     };
+
+    @Input()
+    public index: number;
 }
