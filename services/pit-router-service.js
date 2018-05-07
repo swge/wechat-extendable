@@ -2,7 +2,7 @@ var eventService = require('./event-service');
 var messageService = require('./message-send-service');
 
 module.exports = {
-    router : function(content, app) {
+    router : function(msg, app) {
         if(msg.msgtype === 'event') {
             return eventService.processEvent(msg, app);
         }
@@ -10,7 +10,8 @@ module.exports = {
             //TODO check global scene
             //Answer question
             if(app.currentQuestionPlayer) {
-                return messageService.replayMessage(msg, '恭喜你答对了！');
+                var text = messageService.replayMessage(msg, '恭喜你答对了！');
+                return text;
             }
         }
     }
