@@ -8,7 +8,7 @@ module.exports = {
 
     entry: {
         'polyfills': './client/polyfills.ts',
-        'vendor': './client/vendor.ts',
+        // 'vendor': './client/vendor.ts',
         'app': './client/main.ts'
     },
 
