@@ -13,7 +13,7 @@ module.exports = {
         }
         //Join Question Game
         if(scan.eventkey === 'JoinQuestionGame') {
-            return messageService.replayMessage(scan, '欢迎参加有奖猜猜猜活动！');
+            return messageService.replyMessage(scan, '欢迎参加有奖猜猜猜活动！');
         }
     }
 }

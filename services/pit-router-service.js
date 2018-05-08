@@ -10,10 +10,10 @@ module.exports = {
             //TODO check global scene
             //Answer question
             if(app.currentQuestionPlayer) {
-                var text = messageService.replayMessage(msg, '恭喜你答对了！');
+                var text = messageService.replyMessage(msg, '恭喜你答对了！');
                 return text;
             } else {
-                return messageService.replayMessage(msg, '客官请稍等，游戏马上开始！');
+                return messageService.replyMessage(msg, '客官请稍等，游戏马上开始！');
             }
         }
     }

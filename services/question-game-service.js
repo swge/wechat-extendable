@@ -1,3 +1,4 @@
+var players = require('../questions/players');
 
 
 module.exports = {
