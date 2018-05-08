@@ -13,7 +13,7 @@ module.exports = {
     answerQuestion: (msg, app) => {
         var userId = msg.fromusername;
         if(isUserAnswered(userId, app)) {
-            messageService.replyMessage(msg, '客官，这个问题你已经回答过了');
+            return messageService.replyMessage(msg, '客官，这个问题你已经回答过了');
         } else {
             if(!app.users[userId]) {
                 app.users[userId] = {userId: userId, count: 0};
