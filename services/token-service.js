@@ -1,5 +1,6 @@
 var request = require('request');
 var config = require('../config/env.config');
+var winston = require('winston');
 
 function requestAccessToken() {
     var url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' +
@@ -7,10 +8,9 @@ function requestAccessToken() {
     return new Promise(function(resolve, reject) {
         request.get(url, function(error, response, body) {
             if(error) {
-                console.log(error);
+                winston.log('error', error);
                 reject(error);
             } else {
-                console.log(body);
                 resolve(body);
             }
         })

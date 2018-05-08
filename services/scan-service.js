@@ -9,7 +9,6 @@ module.exports = {
             }
             app.scenes.globalScene = GlobalQuestionScene;
             //reset
-            app.questions = {};
         }
         //Join Question Game
         if(scan.eventkey === 'JoinQuestionGame') {

@@ -6,6 +6,10 @@ module.exports = {
             return undefined;
         }
         let player = players[index];
+        //previous player exists
+        if(app.currentQuestionPlayer) {
+            app.questionGameData[app.currentQuestionPlayer.name] = app.currentQuestionPlayer;
+        }
         app.currentQuestionPlayer = player;
         return player;
     }

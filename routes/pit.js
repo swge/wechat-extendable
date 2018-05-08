@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var envConfig = require('../config/env.config');
 var routerService = require('../services/pit-router-service');
+var questionGamaService = require('../services/question-game-service');
+var winston = require('winston');
 
 function checkSignature(params){
   var key=[envConfig.TOKEN,params.timestamp,params.nonce].sort().join(''); 
@@ -20,10 +22,18 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res) {
+  if(!req.app.questionGameData){
+    req.app.questionGameData = {};
+  }
+  if(!req.app.users) {
+      req.app.users = {};
+  }
   if(!checkSignature(req.query)){
     res.end('signature fail');
   } else {
-    res.end(routerService.router(req.body.xml, req.app));
+    var content = questionGamaService.answerQuestion(req.body.xml, req.app);
+    winston.log('info', content);
+    res.end(content);
   }
 
 });
