@@ -31,7 +31,7 @@ router.post('/', function(req, res) {
   if(!checkSignature(req.query)){
     res.end('signature fail');
   } else {
-    var content = questionGamaService.answerQuestion(req.body.xml, req.app);
+    var content = routerService.router(req.body.xml, req.app);
     winston.log('info', content);
     res.end(content);
   }
