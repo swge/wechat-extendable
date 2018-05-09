@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 var helpers = require('./helpers');
 
 module.exports = {
@@ -67,6 +68,10 @@ module.exports = {
             inject: true,
             template: 'views/index.tpl',
             filename: helpers.root('views', 'index.hbs')
-        })
+        }),
+
+        new CopyWebpackPlugin([
+            { from: 'client/assets/img/players', to: 'assets' }
+        ]),
     ]
 };

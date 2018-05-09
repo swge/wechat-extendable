@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+@import url(https://fonts.googleapis.com/css?family=Acme);
+.home-container{
+    text-align: center;
+    margin: auto;
+    width:60%;
+    h2{
+        padding: 3%;
+        font-size: 2.2em;
+        text-align: center;
+        color: white;
+    }
+    h4{
+        font-size:1.5em;
+        padding:2%;
+        color: white; 
+    }
+    .start-game{
+        outline: none;
+        width: 150px;
+        height: 60px;
+        font-family: inherit;
+        margin: 5px;
+        padding: 5px;
+        display: table;
+        cursor: pointer;
+        border-radius: 6px;
+        opacity: 0.8;
+        background: lighten(#F45B69, 2%); 
+        border: 1px solid darken(#F45B69, 10%);
+        box-shadow: 0px 2px 0 darken(#F45B69, 10%),
+                    2px 4px 1px darken(#F45B69, 5%),
+                    0px 0px 25px rgba(0,0,0,0.1);
+        letter-spacing: 1px;
+        transition: all 0.1s;
+        margin: 1rem auto;
+        &:hover {
+            background: lighten(#F45B69, 2%); 
+            box-shadow: 2px 4px 3px darken(#F45B69, 10%), 
+                        4px 4px 18px darken(#F45B69, 5%);
+        }
+        
+        &:active {
+            background: darken(#F45B69, 5%);
+            border: 1px solid rgba(#000, .05);
+            box-shadow: 1px 1px 2px rgba(#fff, .2);
+        }
+
+        p {
+            color: white;
+            font-size: 20px;
+            font-weight: 800;
+            margin: auto; 
+        }
+    }
+    
+}

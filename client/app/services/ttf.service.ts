@@ -8,6 +8,8 @@ export class TTFService {
 
     public finalScore: any[];
 
+    public player: any;
+
     constructor(private httpClient: HttpClient) {
 
     }
@@ -27,6 +29,13 @@ export class TTFService {
         this.httpClient.get('/ttf/final-score')
             .subscribe((data: any) => {
                 this.finalScore = data;
+            })
+    }
+
+    public getPlayerById(id: number): void {
+        this.httpClient.get('/questions/'+ id)
+            .subscribe((data: any) => {
+                this.player = data;
             })
     }
 }

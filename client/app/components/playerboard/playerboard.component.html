@@ -1,0 +1,22 @@
+
+<div class="ttf-container">
+    <div class="box-wrapper">
+        <div class="question-wrapper" *ngIf="ttfService.player != null">
+            <img src="{{ttfService.player.image}}" alt="photo">
+            <div class="box-content">
+                <div class="title">{{ttfService.player.name}} | {{ttfService.player.nickName}}</div>
+                <p class="card-post-question-item" *ngFor="let question of ttfService.player.questions">
+                    <label class="desc" for="{{question.id}}" [ngClass]="{'checked': isChecked, 'green': question.correct, 'red': !question.correct}">
+                        {{question.label}}: "{{question.content}}"</label>
+                </p>
+                <div class="footer">
+                    <ul class="nav-btn">
+                        <li><a href="javascript:void(0)" (click)="showAnswer()"><span>Answer</span></a></li>
+                        <li><a href="javascript:void(0)" (click)="nextQuestion()"><span>Next</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <round-winner></round-winner>
+    </div>
+</div>

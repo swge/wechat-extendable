@@ -1,6 +1,40 @@
-<div class="scoreboard__overlay">
-    <div class="scoreboard__container">
+<!-- <div class="scoreboard__overlay"> -->
+    <!-- <div class="scoreboard__container">
         <user-detail [user]="{name: 'Name', score: 'Score'}" [index]="'No.'"></user-detail>
         <user-detail *ngFor="let user of ttfService.finalScore; let i = index" [user]="user" [index]="i + 1"></user-detail>
-    </div>
+    </div> -->
+<!-- </div> -->
+
+<div class="scoreboard__container">
+    <section>
+        <!-- <h1>Final Score</h1> -->
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr *ngFor="let user of ttfService.finalScore; let i = index">
+                        <td class="user-detail__index">{{i + 1}}</td>
+                        <!-- <td class="user-detail__avatar"><img *ngIf="user.avatar" [src]="user.avatar" alt=""></td> -->
+                        <td class="user-detail__name">
+                            <div class="user-detail__name_content">
+                                <img *ngIf="user.avatar" [src]="user.avatar" alt=""><p>{{user.name}}</p>
+                            </div>
+                        </td>
+                        <td class="user-detail__score">{{user.score}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 </div>
+
