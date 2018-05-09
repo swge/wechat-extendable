@@ -13,7 +13,7 @@ module.exports = {
                         winston.log('error', error);
                         reject(error);
                     } else {
-                        resolve(body);
+                        resolve(JSON.parse(body));
                     }
                 })
             })
