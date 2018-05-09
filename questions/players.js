@@ -2,7 +2,7 @@ module.exports = [
     {
         name: 'Jerry Wang',
         nickName: '一叶知秋',
-        image: '/stgw/digital/wechat/dist/assets/bg-story.png',
+        image: '/stgw/digital/wechat/dist/assets/jerry.jpg',
         questions: [
             {'label': 'a', 'content': 'I have a 8 years old daughter', 'correct': true},
             {'label': 'b', 'content': 'I have a 9 years old daughter', 'correct': false},
@@ -13,9 +13,9 @@ module.exports = [
         wrongAnswers: {}
     },
     {
-        name: 'Jenny Liu',
-        nickName: 'Jenny',
-        image: '/stgw/digital/wechat/dist/assets/bg-story.png',
+        name: 'Mark Yang',
+        nickName: '杨玉财',
+        image: '/stgw/digital/wechat/dist/assets/markY.jpg',
         questions: [
             {'label': 'a', 'content': 'I have a 3 years old son', 'correct': true},
             {'label': 'b', 'content': 'I have a 4 years old son', 'correct': false},
@@ -26,9 +26,9 @@ module.exports = [
         wrongAnswers: {}
     },
     {
-        name: 'Jerry Wang',
-        nickName: '一叶知秋',
-        image: '/stgw/digital/wechat/dist/assets/bg-story.png',
+        name: 'Mason Liu',
+        nickName: '老刘',
+        image: '/stgw/digital/wechat/dist/assets/mason.jpg',
         questions: [
             {'label': 'a', 'content': 'I have a 8 years old daughter', 'correct': true},
             {'label': 'b', 'content': 'I have a 9 years old daughter', 'correct': false},

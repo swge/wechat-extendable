@@ -13,6 +13,7 @@ export class PlayerBoardComponent implements OnInit{
     //     private ttfService: TTFService
     // ) {}
     isChecked: boolean = false;
+    notEnabled: boolean = true;
     playerID: number = 0;
     constructor(
         private router: Router,
@@ -25,6 +26,7 @@ export class PlayerBoardComponent implements OnInit{
     public showAnswer(): void {
         this.ttfService.getRoundWinners();
         this.isChecked = true;
+        this.notEnabled = false;
     }
 
     public nextQuestion(): void {
@@ -36,5 +38,6 @@ export class PlayerBoardComponent implements OnInit{
         else{
             this.router.navigateByUrl('scoreboard');
         }  
+        this.notEnabled = true;
     }
 }

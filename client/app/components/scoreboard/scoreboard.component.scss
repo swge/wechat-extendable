@@ -5,6 +5,7 @@
     width: 80%;
     margin:auto;
     margin-bottom: 10%;
+    margin-top: 4%;
     h1{
         font-size: 30px;
         color: #fff;
@@ -46,6 +47,7 @@
         &_content{
             display: flex;
             align-items: center;
+            min-width: 40%;
             margin: auto;
             width: fit-content;
             p{
