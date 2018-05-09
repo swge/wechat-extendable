@@ -11,7 +11,9 @@ function requestAccessToken() {
                 winston.log('error', error);
                 reject(error);
             } else {
-                resolve(body);
+                winston.log('info', 'Successfully retrieving access_token');
+                winston.log('info', body);
+                resolve(JSON.parse(body));
             }
         })
     })
