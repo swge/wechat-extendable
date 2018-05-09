@@ -19,15 +19,20 @@ function requestAccessToken() {
 
 module.exports = {
     getAccessToken: (app) => {
-        if(!app.accessToken || app.accessToken.expires_at < new Date().getTime()) {
-            requestAccessToken().then(function(token){
-                var expires_at = new Date().getTime() + token.expires_in * 1000 - 600000;
-                token.expires_at = expires_at;
-                app.accessToken = token;
-            }).error(function(err){
-                console.log(err);
-            })
-        }
-        return app.accessToken.access_token;
+        return new Promise((resolve, reject) => {
+            if(!app.accessToken || app.accessToken.expires_at < new Date().getTime()) {
+                requestAccessToken().then(token =>{
+                    var expires_at = new Date().getTime() + token.expires_in * 1000 - 600000;
+                    token.expires_at = expires_at;
+                    app.accessToken = token;
+                    resolve(token.access_token);
+                }, error => {
+                    winston.log('error', error);
+                    reject(error);
+                })
+            } else {
+                resolve(app.accessToken.access_token);
+            }
+        });
     }
 }

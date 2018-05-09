@@ -28,13 +28,13 @@ router.post('/', function(req, res) {
   if(!req.app.users) {
       req.app.users = {};
   }
-  if(!checkSignature(req.query)){
-    res.end('signature fail');
-  } else {
+  // if(!checkSignature(req.query)){
+  //   res.end('signature fail');
+  // } else {
     var content = routerService.router(req.body.xml, req.app);
     winston.log('info', content);
     res.end(content);
-  }
+  // }
 
 });
 

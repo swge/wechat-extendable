@@ -8,8 +8,9 @@ module.exports = [
             {'label': 'b', 'content': 'I have a 9 years old daughter', 'correct': false},
             {'label': 'c', 'content': 'I have a 10 years old daughter', 'correct': false}
         ],
-        correctQuestion: 'a'
-
+        correctQuestion: 'a',
+        rightAnswers: {},
+        wrongAnswers: {}
     },
     {
         name: 'Jenny Liu',
@@ -20,6 +21,8 @@ module.exports = [
             {'label': 'b', 'content': 'I have a 4 years old son', 'correct': false},
             {'label': 'c', 'content': 'I have a 5 years old son', 'correct': false}
         ],
-        correctQuestion: 'a'
+        correctQuestion: 'a',
+        rightAnswers: {},
+        wrongAnswers: {}
     }
 ]

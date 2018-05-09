@@ -3,7 +3,7 @@ var messageService = require('./message-send-service');
 var userService = require('./user-service');
 
 function isUserAnswered (userId, app) {
-    return app.currentQuestionPlayer.rightAnswers[userId] || app.currentQuestionPlayer.wrongAnswers;
+    return app.currentQuestionPlayer.rightAnswers[userId] || app.currentQuestionPlayer.wrongAnswers[userId];
 }
 
 /**
@@ -16,15 +16,15 @@ module.exports = {
             return messageService.replyMessage(msg, '客官，这个问题你已经回答过了');
         } else {
             if(!app.users[userId]) {
-                app.users[userId] = {userId: userId, count: 0};
+                app.users[userId] = {userId: userId, score: 0};
                 //load detail
                 userService.loadUserDetail(userId, app).then((detail) => {
                     app.users[userId].detail = detail;
                 })
             } 
             if(app.currentQuestionPlayer.correctQuestion === msg.content.trim()) {
-                app.users[userId].count++;
-                app.currentQuestionPlayer.rightAnswers[userId] = app.users[userId].detail;
+                app.users[userId].score++;
+                app.currentQuestionPlayer.rightAnswers[userId] = app.users[userId];
                 return messageService.replyMessage(msg, '恭喜你答对了！');
             } else {
                 app.currentQuestionPlayer.wrongAnswers[userId] = app.users[userId].detail;
