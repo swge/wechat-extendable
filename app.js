@@ -62,6 +62,8 @@ app.use(envConfig.STGW_URL, express.static(path.join(__dirname, 'public')));
 //add app to request
 app.use('/', function(req, res, next) {
     req.app = app;
+    req.app.questionGameData = {};
+    req.app.users = {};
     winston.log('info',req.body);
     next();
 });

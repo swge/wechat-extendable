@@ -22,12 +22,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res) {
-  if(!req.app.questionGameData){
-    req.app.questionGameData = {};
-  }
-  if(!req.app.users) {
-      req.app.users = {};
-  }
   // if(!checkSignature(req.query)){
   //   res.end('signature fail');
   // } else {
