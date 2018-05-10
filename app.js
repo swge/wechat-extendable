@@ -59,6 +59,9 @@ app.use(cookieParser());
 app.use('/pit', xmlParser({explicitArray: false}));
 app.use(envConfig.STGW_URL, express.static(path.join(__dirname, 'public')));
 
+app.questionGameData = {};
+app.users = {};
+
 //add app to request
 app.use('/', function(req, res, next) {
     req.app = app;
