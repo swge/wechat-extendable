@@ -1,8 +1,23 @@
+$transition_timing_fn_in: cubic-bezier(0.230, 1.000, 0.320, 1.000);
 .avatar__container {
-    // padding: 10px;
     margin: 15px;
     text-align: center;
     box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    position: relative;
+    // -webkit-animation: swing 1s ease;
+    // animation: swing 1s ease;
+    // -webkit-animation-iteration-count: 1;
+    // animation-iteration-count: 1;
+    &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 112px;
+        height: 5px;
+        box-shadow: inset 0px 2px 4px 0px #007cc1;
+        border-radius: 50%;
+        left: -10px;
+    }
     .avatar-image__container {
         text-align: center;
 

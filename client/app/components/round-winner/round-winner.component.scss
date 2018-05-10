@@ -3,13 +3,37 @@
     margin: auto;
     padding: 20px;
     background: white;
+    position: relative;
+    top: 80px;
 
     .round-winners__title {
-        font-size: 2em;
+        font-size: 1.6em;
         text-transform: uppercase;
         font-weight: 700;
-        font-family: 'Acme', cursive;
-        color: #06D6A0;
+        color: #8dcb4f;
+        text-align: left;
+        position: relative;
+        padding: 0 0 8px 0;
+
+        &::before {
+            display: block;
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 79%;
+            border: 1px solid #eee;
+        }
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            right: 0;
+            bottom: 0;
+            width: 19%;
+            border: 1px solid #eee;
+        }
     }
 
     .round-winners__user-view {

@@ -71,6 +71,9 @@ app.use('/pit', pitRouter);
 app.use('/ttf', ttfRouter);
 app.use('/questions', questionPlayerRouter);
 
+app.all('*', function(req, res) {
+    res.status(200).render(path.join(__dirname, 'views/index.hbs'));
+});
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     next(createError(404));

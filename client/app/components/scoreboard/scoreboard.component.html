@@ -24,7 +24,6 @@
                 <tbody>
                     <tr *ngFor="let user of ttfService.finalScore; let i = index">
                         <td class="user-detail__index">{{i + 1}}</td>
-                        <!-- <td class="user-detail__avatar"><img *ngIf="user.avatar" [src]="user.avatar" alt=""></td> -->
                         <td class="user-detail__name">
                             <div class="user-detail__name_content">
                                 <img *ngIf="user.detail.headimgurl" [src]="user.detail.headimgurl" alt=""><p>{{user.detail.nickname}}</p>

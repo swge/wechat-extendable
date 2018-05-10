@@ -67,10 +67,10 @@ h1, h2, h3, h4 {
         }
     }
     .qr-code{
-        position: fixed;
+        position: absolute;
         height: 150px;
-        left: 5%;
-        top: 7%;
+        left: 80px;
+        top: 80px;
         z-index: 9999;
     }
 
