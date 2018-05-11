@@ -53,7 +53,7 @@ export class PlayerBoardComponent implements OnInit{
     }
 
     public nextQuestion(): void {
-        // $('#palyer-image').attr('src', '');
+        $('.card-image').attr('src', '');
         // $('.question-wrapper').css('display', 'none');
         // $('.loading-holder').css('display', 'block');
         this.ttfService.resetRoundWinners();
