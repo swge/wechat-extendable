@@ -20,6 +20,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /jquery[\/\\]dist[\/\\]jquery.min.js/,
+                loader: 'script-loader'
+            },
+            {
                 test: /\.ts$/,
                 loaders: [
                     {

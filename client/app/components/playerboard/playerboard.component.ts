@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';   
 import { TTFService } from '../../services/ttf.service';
+import { DOCUMENT } from '@angular/platform-browser';
+import * as $ from 'jquery';
 
 @Component({
     selector: 'player-board',
@@ -51,8 +53,11 @@ export class PlayerBoardComponent implements OnInit{
     }
 
     public nextQuestion(): void {
-        this.loaded = false;
+        // $('#palyer-image').attr('src', '');
+        // $('.question-wrapper').css('display', 'none');
+        // $('.loading-holder').css('display', 'block');
         this.ttfService.resetRoundWinners();
+        // this.loaded = false;
         let id = ++this.playerID;
         if(id < 5){
             this.router.navigateByUrl('playerboard/'+ id);
