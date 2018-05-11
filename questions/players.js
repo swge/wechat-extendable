@@ -5,7 +5,7 @@ module.exports = [
         image: '/stgw/digital/wechat/dist/assets/jerry.jpg',
         questions: [
             {'label': 'a', 'content': 'I had a dream to go to the big city Shenyang when I was child, then one day I was lost.', 'correct': true},
-            {'label': 'b', 'content': 'In one college exam, I copied a wrong answer from other people, which caused my exacm fail.', 'correct': true},
+            {'label': 'b', 'content': 'In one college exam, I copied a wrong answer from other people, which caused my exam fail.', 'correct': true},
             {'label': 'c', 'content': 'I am a football fan, but I do not like playing football.', 'correct': false}
         ],
         correctQuestion: 'c',
