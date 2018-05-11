@@ -22,14 +22,14 @@ module.exports = {
                     app.users[userId].detail = detail;
                 })
             } 
-            if(app.currentQuestionPlayer.correctQuestion === msg.content.trim()) {
+            if(app.currentQuestionPlayer.correctQuestion.toUpperCase() === msg.content.trim().toUpperCase()) {
                 app.users[userId].score++;
                 app.currentQuestionPlayer.rightAnswers[userId] = app.users[userId];
-                return messageService.replyMessage(msg, '恭喜你答对了！');
             } else {
                 app.currentQuestionPlayer.wrongAnswers[userId] = app.users[userId];
-                return messageService.replyMessage(msg, '哎呀，看来你对 '+ app.currentQuestionPlayer.nickName +' 还需要加强了解啊~~');
+                // return messageService.replyMessage(msg, '哎呀，看来你对 '+ app.currentQuestionPlayer.nickName +' 还需要加强了解啊~~');
             }
+            return messageService.replyMessage(msg, '收到！敬请期待揭晓答案！');
         }
     }
 }
