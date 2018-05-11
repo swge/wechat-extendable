@@ -4,7 +4,7 @@ module.exports = [
         nickName: '一叶知秋',
         image: '/stgw/digital/wechat/dist/assets/jerry.jpg',
         questions: [
-            {'label': 'a', 'content': 'I had a dream to go to the big city Shenyang hwen I was child, then one day I was lost.', 'correct': true},
+            {'label': 'a', 'content': 'I had a dream to go to the big city Shenyang when I was child, then one day I was lost.', 'correct': true},
             {'label': 'b', 'content': 'In one college exam, I copied a wrong answer from other people, which caused my exacm fail.', 'correct': true},
             {'label': 'c', 'content': 'I am a football fan, but I do not like playing football.', 'correct': false}
         ],
@@ -41,7 +41,7 @@ module.exports = [
     {
         name: 'Jenny Liu',
         nickName: 'Jenny',
-        image: '/stgw/digital/wechat/dist/assets/bg-story.png',
+        image: '/stgw/digital/wechat/dist/assets/person-default.png',
         questions: [
             {'label': 'a', 'content': 'Lunch box', 'correct': true},
             {'label': 'b', 'content': 'Bad sense of direction', 'correct': true},

@@ -1,8 +1,11 @@
 
 <div class="ttf-container">
     <div class="box-wrapper">
-        <div class="question-wrapper" *ngIf="ttfService.player != null">
-            <img src="{{ttfService.player.image}}" alt="photo">
+        <img *ngIf="!loaded" class="loading-holder" src="../../../assets/img/loading.svg"/>
+        <div class="question-wrapper" *ngIf="ttfService.player != null" [display.none]="!loaded">
+            <!-- <img *ngIf="!loaded" class="loading-holder" src="../../../assets/img/loading.svg"/> -->
+            <img [hidden]="!loaded" (load)="loaded = true" src="{{ttfService.player.image}}"/>
+            <!-- <img class="card-image" src="{{ttfService.player.image}}" alt="photo" (load)="dosomething()"> -->
             <div class="box-content">
                 <div class="title">{{ttfService.player.name}} | {{ttfService.player.nickName}}</div>
                 <p class="card-post-question-item" *ngFor="let question of ttfService.player.questions">

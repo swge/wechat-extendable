@@ -13,6 +13,7 @@ export class PlayerBoardComponent implements OnInit{
     isChecked: boolean = false;
     notEnabled: boolean = true;
     playerID: number = 0;
+    loaded: boolean = false;
 
     constructor(
         private router: Router,
@@ -27,16 +28,18 @@ export class PlayerBoardComponent implements OnInit{
 
         this.router.events.subscribe((evt) => {
             if (evt instanceof NavigationEnd) {
-            // trick the Router into believing it's last link wasn't previously loaded
-            this.router.navigated = false;
-            // if you need to scroll back to top, here is the right place
-            window.scrollTo(0, 0);
+                this.loaded = false;
+                // trick the Router into believing it's last link wasn't previously loaded
+                this.router.navigated = false;
+                // if you need to scroll back to top, here is the right place
+                window.scrollTo(0, 0);
             }
         });
 
     }
 
     ngOnInit(){
+        this.loaded = false;
         this.playerID = Number(this.activeRoute.snapshot.paramMap.get('id'));
         this.ttfService.getPlayerById(this.playerID);
     }
@@ -48,9 +51,10 @@ export class PlayerBoardComponent implements OnInit{
     }
 
     public nextQuestion(): void {
+        this.loaded = false;
         this.ttfService.resetRoundWinners();
         let id = ++this.playerID;
-        if(id < 6){
+        if(id < 5){
             this.router.navigateByUrl('playerboard/'+ id);
             this.ttfService.getPlayerById(id);
         }
