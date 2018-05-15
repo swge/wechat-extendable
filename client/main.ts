@@ -8,3 +8,15 @@ if (process.env.ENV === 'production') {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule);
+
+//Install Service Worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then((registration: ServiceWorkerRegistration) => {
+                console.log('ServiceWorker registration successful with scope: ' + registration.scope);
+            }, (err: Error) => {
+                console.log('ServiceWorker registration failed: ' + err);
+            });
+    });
+}

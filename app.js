@@ -70,6 +70,7 @@ app.use('/', function(req, res, next) {
 });
 
 app.use('/', indexRouter);
+app.use('/service-worker.js', express.static(path.join(__dirname, 'service-worker.js')));
 app.use('/pit', pitRouter);
 app.use('/ttf', ttfRouter);
 app.use('/questions', questionPlayerRouter);
