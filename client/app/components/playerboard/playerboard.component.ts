@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';   
@@ -11,7 +11,7 @@ import * as $ from 'jquery';
     templateUrl: './playerboard.component.html',
     styleUrls: [ './playerboard.component.scss' ]
 })
-export class PlayerBoardComponent implements OnInit{
+export class PlayerBoardComponent implements OnInit, OnDestroy{
     isChecked: boolean = false;
     notEnabled: boolean = true;
     playerID: number = 0;
@@ -41,7 +41,9 @@ export class PlayerBoardComponent implements OnInit{
     }
 
     ngOnInit(){
-        this.loaded = false;
+        // this.ttfService.resetRoundWinners();
+        // this.ttfService.resetPlayers();
+        // this.loaded = false;
         this.playerID = Number(this.activeRoute.snapshot.paramMap.get('id'));
         this.ttfService.getPlayerById(this.playerID);
     }
@@ -53,15 +55,13 @@ export class PlayerBoardComponent implements OnInit{
     }
 
     public nextQuestion(): void {
-        $('.card-image').attr('src', '');
-        // $('.question-wrapper').css('display', 'none');
-        // $('.loading-holder').css('display', 'block');
-        this.ttfService.resetRoundWinners();
+        // this.ttfService.resetRoundWinners();
+        // this.ttfService.resetPlayers();
         // this.loaded = false;
         let id = ++this.playerID;
         if(id < 5){
             this.router.navigateByUrl('playerboard/'+ id);
-            this.ttfService.getPlayerById(id);
+            this.ttfService.getPlayerById(id)
         }
         else{
             this.router.navigateByUrl('scoreboard');
@@ -70,7 +70,10 @@ export class PlayerBoardComponent implements OnInit{
         this.notEnabled = true;
     }
 
-    public goBack(): void {
-        this.location.back();
+    ngOnDestroy(){
+        this.ttfService.resetRoundWinners();
+        this.ttfService.resetPlayers();
+        this.loaded = false;
+        console.log();
     }
 }

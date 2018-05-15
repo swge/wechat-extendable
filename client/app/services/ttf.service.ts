@@ -25,6 +25,10 @@ export class TTFService {
         this.roundWinners = null;
     }
 
+    public resetPlayers(): void {
+        this.player = null;
+    }
+
     public getFinalScore(): void {
         this.httpClient.get('/ttf/final-score')
             .subscribe((data: any) => {
