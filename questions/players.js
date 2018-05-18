@@ -41,7 +41,7 @@ module.exports = [
     {
         name: 'Ivan Wang',
         nickName: '小黄人',
-        image: '/stgw/digital/wechat/dist/assets/person-default.png',
+        image: '/stgw/digital/wechat/dist/assets/Ivan.jpg',
         questions: [
             {'label': 'a', 'content': '小黄人由来', 'correct': true},
             {'label': 'b', 'content': '文科生', 'correct': false},
