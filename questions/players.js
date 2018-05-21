@@ -1,64 +1,64 @@
 module.exports = [
     {
-        name: 'Jerry Wang',
-        nickName: '一叶知秋',
-        image: '/stgw/digital/wechat/dist/assets/jerry.jpg',
+        name: 'Karen Miao',
+        nickName: '苗田田',
+        image: '/stgw/digital/wechat/dist/assets/Karen.jpg',
         questions: [
-            {'label': 'a', 'content': 'I had a dream to go to the big city Shenyang when I was child, then one day I was lost.', 'correct': true},
-            {'label': 'b', 'content': 'In one college exam, I copied a wrong answer from other people, which caused my exam fail.', 'correct': true},
-            {'label': 'c', 'content': 'I am a football fan, but I do not like playing football.', 'correct': false}
-        ],
-        correctQuestion: 'c',
-        rightAnswers: {},
-        wrongAnswers: {}
-    },
-    {
-        name: 'Mark Yang',
-        nickName: '杨玉财',
-        image: '/stgw/digital/wechat/dist/assets/markY.jpg',
-        questions: [
-            {'label': 'a', 'content':'我曾经满怀信心的错把”Beanda Liu“喊成了"Brenda Yu", 然后Brenda Yu开始流行', 'correct': true},
-            {'label': 'b', 'content': '我曾经在清真饭店吃猪蹄，被老板揍了', 'correct': false},
-            {'label': 'c', 'content': '我在美国出差的时候和大海里的野生鲸鱼同框过', 'correct': true}
+            {'label': 'a', 'content': '110', 'correct': true},
+            {'label': 'b', 'content': '120', 'correct': false},
+            {'label': 'c', 'content': '119', 'correct': true}
         ],
         correctQuestion: 'b',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Mason Liu',
-        nickName: '老刘',
-        image: '/stgw/digital/wechat/dist/assets/mason.jpg',
+        name: 'Eric Li',
+        nickName: 'Eric',
+        image: '/stgw/digital/wechat/dist/assets/Eric.jpg',
         questions: [
-            {'label': 'a', 'content': '我养了一只狗', 'correct': false},
-            {'label': 'b', 'content': '我曾经在建筑工地打过工', 'correct': true},
-            {'label': 'c', 'content': '我化工专业，擅长做葡萄酒', 'correct': true}
-        ],
-        correctQuestion: 'a',
-        rightAnswers: {},
-        wrongAnswers: {}
-    },
-    {
-        name: 'Jenny Liu',
-        nickName: 'Jenny',
-        image: '/stgw/digital/wechat/dist/assets/person-default.png',
-        questions: [
-            {'label': 'a', 'content': 'Lunch box', 'correct': true},
-            {'label': 'b', 'content': 'Bad sense of direction', 'correct': true},
-            {'label': 'c', 'content': 'Wine', 'correct': false}
+            {'label': 'a', 'content':'I am an stubborn person', 'correct': true},
+            {'label': 'b', 'content': 'My wife said she was spent 5 yuan to buy me', 'correct': true},
+            {'label': 'c', 'content': 'My friends know I am Chinese Korean Ethnic during the university', 'correct': false}
         ],
         correctQuestion: 'c',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Stone Shi',
-        nickName: '石头',
-        image: '/stgw/digital/wechat/dist/assets/stone.jpg',
+        name: 'Ivan Wang',
+        nickName: '小黄人',
+        image: '/stgw/digital/wechat/dist/assets/Ivan.jpg',
         questions: [
-            {'label': 'a', 'content': '第一次去拜见岳父岳母就喝醉了', 'correct': true},
-            {'label': 'b', 'content': '去过佛罗里达的大沼泽和亚利桑那州的大峡谷', 'correct': true},
-            {'label': 'c', 'content': '在拉斯维加斯赢过钱', 'correct': false}
+            {'label': 'a', 'content': '小黄人由来', 'correct': true},
+            {'label': 'b', 'content': '文科生', 'correct': false},
+            {'label': 'c', 'content': '朋友圈', 'correct': true}
+        ],
+        correctQuestion: 'b',
+        rightAnswers: {},
+        wrongAnswers: {}
+    },
+    {
+        name: 'Esther Shen',
+        nickName: '沈小豆',
+        image: '/stgw/digital/wechat/dist/assets/Esther.jpg',
+        questions: [
+            {'label': 'a', 'content': '我曾经在毫无征兆的情况下撞上过电线杆，结果伤痕累累。', 'correct': true},
+            {'label': 'b', 'content': '我曾经被鱼咬过一大口，并且咬破了。', 'correct': true},
+            {'label': 'c', 'content': '我曾经误把我爸当成坏人，并向警察叔叔（小区保安）寻求帮助', 'correct': false}
+        ],
+        correctQuestion: 'c',
+        rightAnswers: {},
+        wrongAnswers: {}
+    },
+    {
+        name: 'Tim Wang',
+        nickName: '王胖子',
+        image: '/stgw/digital/wechat/dist/assets/Tim.jpg',
+        questions: [
+            {'label': 'a', 'content': '我曾经是年级的球队守门员，并且在最后一场比赛中只用脚扑出了三个点球赢得了比赛。', 'correct': true},
+            {'label': 'b', 'content': '我在星海广场扮成轻松熊跟我媳妇求婚并上了半岛晨报的新闻。', 'correct': true},
+            {'label': 'c', 'content': '我参加过一次两天48小时不间断的的游戏开发大赛，并拿到了名次。', 'correct': false}
         ],
         correctQuestion: 'c',
         rightAnswers: {},
