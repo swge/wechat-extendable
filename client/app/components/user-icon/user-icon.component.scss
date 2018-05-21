@@ -1,3 +1,4 @@
+@import '../../../assets/sass/media.query';
 $transition_timing_fn_in: cubic-bezier(0.230, 1.000, 0.320, 1.000);
 .avatar__container {
     margin: 15px;
@@ -12,11 +13,11 @@ $transition_timing_fn_in: cubic-bezier(0.230, 1.000, 0.320, 1.000);
         display: block;
         position: absolute;
         content: '';
-        width: 112px;
+        width: 6.4em;
         height: 5px;
         box-shadow: inset 0px 2px 4px 0px #007cc1;
         border-radius: 50%;
-        left: -10px;
+        left: -0.2;
     }
     .avatar-image__container {
         text-align: center;
@@ -25,6 +26,10 @@ $transition_timing_fn_in: cubic-bezier(0.230, 1.000, 0.320, 1.000);
             width: 92px;
             height: 92px;
             border-radius: 4%;
+            @media #{$medium} {
+                width: 6em;
+                height: 6em;
+            }
         }
     }
 }

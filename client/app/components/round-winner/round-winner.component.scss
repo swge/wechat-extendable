@@ -1,10 +1,15 @@
+@import '../../../assets/sass/media.query';
+
 .round-winners__container {
     text-align: center;
     margin: auto;
     padding: 20px;
     background: white;
     position: relative;
-    top: 60px;
+    top: 4em;
+    @media #{$medium} {
+        font-size: 0.6em;
+    }
 
     .round-winners__title {
         font-size: 1.6em;

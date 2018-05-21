@@ -1,13 +1,15 @@
 @import '../../node_modules/font-awesome/css/font-awesome.min.css';
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 @import url(https://fonts.googleapis.com/css?family=Acme);
-
+@import '../assets/sass/media.query';
 
 h1, h2, h3, h4 {
     color: #EBEBEB;
     text-align: center;
 }
-
+body{
+    background: #EAEBED url(../assets/img/bg-00.gif) repeat fixed 0% 0%;
+}
 .wrapper{
     font-family: 'Quicksand', cursive;
     position: absolute;
@@ -15,7 +17,8 @@ h1, h2, h3, h4 {
     top: 0;
    // background: linear-gradient(122deg, transparent, #52489C), linear-gradient(32deg, #F45B69, #59C3C3);
     justify-content: flex-start;
-    background-image: url(../assets/img/intro-1.jpg);
+    // background-image: url(../assets/img/intro-1.jpg);
+    background-image: url(../assets/img/img-3.jpg);
     min-height: 100vh;
     width: 100vw;
     margin: 0;
@@ -72,6 +75,9 @@ h1, h2, h3, h4 {
         left: 80px;
         top: 80px;
         z-index: 9999;
+        @media #{$medium} {
+          display: none;
+        }
     }
 
     .pit-container{
