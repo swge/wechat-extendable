@@ -28,7 +28,7 @@ module.exports = [
     {
         name: 'Eric Li',
         nickName: '小项目之王',
-        image: '/stgw/digital/wechat/dist/assets/eric(xiannan).jpg',
+        image: '/stgw/digital/wechat/dist/assets/xiannan.jpg',
         questions: [
             {'label': 'a', 'content': '奥运火炬手', 'correct': false},
             {'label': 'b', 'content': '握手', 'correct': true},
