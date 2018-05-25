@@ -1,64 +1,64 @@
 module.exports = [
     {
-        name: 'Karen Miao',
-        nickName: '苗田田',
-        image: '/stgw/digital/wechat/dist/assets/Karen.jpg',
+        name: 'Gavin Pang',
+        nickName: 'Mr. Pang',
+        image: '/stgw/digital/wechat/dist/assets/gavin.jpg',
         questions: [
-            {'label': 'a', 'content': '110', 'correct': true},
-            {'label': 'b', 'content': '120', 'correct': false},
-            {'label': 'c', 'content': '119', 'correct': true}
+            {'label': 'a', 'content': 'Volleyball', 'correct': false},
+            {'label': 'b', 'content': 'Groomsman', 'correct': true},
+            {'label': 'c', 'content': 'Roommate', 'correct': true}
         ],
-        correctQuestion: 'b',
+        correctQuestion: 'a',
+        rightAnswers: {},
+        wrongAnswers: {}
+    },
+    {
+        name: 'Shell Wang',
+        nickName: '澍',
+        image: '/stgw/digital/wechat/dist/assets/shell.jpg',
+        questions: [
+            {'label': 'a', 'content': 'naughty', 'correct': false},
+            {'label': 'b', 'content': 'Ran away to home', 'correct': true},
+            {'label': 'c', 'content': 'Car', 'correct': true}
+        ],
+        correctQuestion: 'a',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
         name: 'Eric Li',
-        nickName: 'Eric',
-        image: '/stgw/digital/wechat/dist/assets/Eric.jpg',
+        nickName: '小项目之王',
+        image: '/stgw/digital/wechat/dist/assets/eric.jpg',
         questions: [
-            {'label': 'a', 'content':'I am an stubborn person', 'correct': true},
-            {'label': 'b', 'content': 'My wife said she was spent 5 yuan to buy me', 'correct': true},
-            {'label': 'c', 'content': 'My friends know I am Chinese Korean Ethnic during the university', 'correct': false}
+            {'label': 'a', 'content': '奥运火炬手', 'correct': false},
+            {'label': 'b', 'content': '握手', 'correct': true},
+            {'label': 'c', 'content': '逆行', 'correct': true}
         ],
-        correctQuestion: 'c',
+        correctQuestion: 'a',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Ivan Wang',
-        nickName: '小黄人',
-        image: '/stgw/digital/wechat/dist/assets/Ivan.jpg',
+        name: 'Bill Mao',
+        nickName: '型男18岁',
+        image: '/stgw/digital/wechat/dist/assets/bill.jpg',
         questions: [
-            {'label': 'a', 'content': '小黄人由来', 'correct': true},
-            {'label': 'b', 'content': '文科生', 'correct': false},
-            {'label': 'c', 'content': '朋友圈', 'correct': true}
+            {'label': 'a', 'content':'大二时体重不足120斤，毕业那年体重达到人生巅峰180斤。', 'correct': true},
+            {'label': 'b', 'content': '作为骑行北理的成员之一，我在大一到大二暑假一年间内，跟队或带队骑行了G102北京-哈尔滨、G110北京-包头、G318重庆-成都-拉萨三条长途，总路程近5000km。', 'correct': false},
+            {'label': 'c', 'content': '大学毕业后应招北京某空军部队入伍，后因每天需要跑早操最终放弃。', 'correct': true}
         ],
         correctQuestion: 'b',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Esther Shen',
-        nickName: '沈小豆',
-        image: '/stgw/digital/wechat/dist/assets/Esther.jpg',
+        name: 'Evan Xu',
+        nickName: '饭长',
+        image: '/stgw/digital/wechat/dist/assets/evan.jpg',
         questions: [
-            {'label': 'a', 'content': '我曾经在毫无征兆的情况下撞上过电线杆，结果伤痕累累。', 'correct': true},
-            {'label': 'b', 'content': '我曾经被鱼咬过一大口，并且咬破了。', 'correct': true},
-            {'label': 'c', 'content': '我曾经误把我爸当成坏人，并向警察叔叔（小区保安）寻求帮助', 'correct': false}
-        ],
-        correctQuestion: 'c',
-        rightAnswers: {},
-        wrongAnswers: {}
-    },
-    {
-        name: 'Tim Wang',
-        nickName: '王胖子',
-        image: '/stgw/digital/wechat/dist/assets/Tim.jpg',
-        questions: [
-            {'label': 'a', 'content': '我曾经是年级的球队守门员，并且在最后一场比赛中只用脚扑出了三个点球赢得了比赛。', 'correct': true},
-            {'label': 'b', 'content': '我在星海广场扮成轻松熊跟我媳妇求婚并上了半岛晨报的新闻。', 'correct': true},
-            {'label': 'c', 'content': '我参加过一次两天48小时不间断的的游戏开发大赛，并拿到了名次。', 'correct': false}
+            {'label': 'a', 'content': 'CABIN', 'correct': true},
+            {'label': 'b', 'content': 'ROOF', 'correct': true},
+            {'label': 'c', 'content': 'KAYAK', 'correct': false}
         ],
         correctQuestion: 'c',
         rightAnswers: {},
