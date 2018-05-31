@@ -5,10 +5,11 @@ module.exports = {
         if(index > players.length -1) {
             return undefined;
         }
+
+        app.questionGameData.active = true;
         let player = players[index];
         //previous player exists
         if(app.currentQuestionPlayer) {
-            app.questionGameData.active = true;
             app.questionGameData[app.currentQuestionPlayer.name] = app.currentQuestionPlayer;
         }
         app.currentQuestionPlayer = player;
