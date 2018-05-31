@@ -12,4 +12,9 @@ router.get('/:index', (req, res) => {
   var detail = playerSerivce.loadPlayer(req.app, index);
   res.json(detail);
 })
+
+router.get('/get/all-players', (req, res) => {
+  var allPlayers = playerSerivce.getAllPlayer();
+  res.json(allPlayers);
+})
 module.exports = router;

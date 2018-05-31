@@ -14,7 +14,11 @@ module.exports = {
         var userId = msg.fromusername;
         if(isUserAnswered(userId, app)) {
             return messageService.replyMessage(msg, '客官，这个问题你已经回答过了');
-        } else {
+        } 
+        else if(!app.questionGameData.active){
+            return messageService.replyMessage(msg, '客官，此回合已结束，你跟Jerry学坏了!');
+        }
+        else {
             if(!app.users[userId]) {
                 app.users[userId] = {userId: userId, score: 0};
                 //load detail
