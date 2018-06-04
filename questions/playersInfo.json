@@ -1,0 +1,52 @@
+{
+    "ttfPlayer": [
+        {
+            "id": 0,
+            "name": "Ammy Li",
+            "nickName": "Ammy",
+            "image": "/stgw/digital/wechat/dist/assets/ammy.jpg",
+            "questions": [
+                {
+                    "label": "a",
+                    "content": "桌式足球比赛",
+                    "correct": false
+                },
+                {
+                    "label": "b",
+                    "content": "撞电线杆",
+                    "correct": true
+                },
+                {
+                    "label": "c",
+                    "content": "曾经养过一只小泰迪",
+                    "correct": true
+                }
+            ],
+            "correctQuestion": "a"
+        },
+        {
+            "name": "test11",
+            "nickName": "Ammy",
+            "image": "/stgw/digital/wechat/dist/assets/ammy.jpg",
+            "questions": [
+                {
+                    "label": "a",
+                    "content": "桌式足球比赛",
+                    "correct": false
+                },
+                {
+                    "label": "b",
+                    "content": "撞电线杆",
+                    "correct": true
+                },
+                {
+                    "label": "c",
+                    "content": "曾经养过一只小泰迪",
+                    "correct": true
+                }
+            ],
+            "correctQuestion": "a",
+            "id": 0
+        }
+    ]
+}

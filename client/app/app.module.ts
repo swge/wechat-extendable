@@ -9,17 +9,23 @@ import { ScoreboardComponent } from './components/scoreboard/scoreboard.componen
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { HomeBoardComponent } from './components/homeboard/homeboard.component';
 import { PlayerBoardComponent } from './components/playerboard/playerboard.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { UserIntroComponent } from './components/user-profile/profile-intro/profile-intro.component';
 import { TTFService } from './services/ttf.service';
+import { CircleBarComponent } from './components/circle-bar/circle-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     HomeBoardComponent,
     PlayerBoardComponent,
+    UserProfileComponent,
+    UserIntroComponent,
     RoundWinnerComponent, 
     UserIconComponent,
     ScoreboardComponent, 
-    UserDetailComponent 
+    UserDetailComponent,
+    CircleBarComponent 
   ],
   imports: [
     BrowserModule,

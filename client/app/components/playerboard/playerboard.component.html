@@ -7,7 +7,7 @@
             <img [hidden]="!loaded" id="palyer-image" (load)="loaded = true" src="{{ttfService.player.image}}"/>
             <!-- <img class="card-image" src="{{ttfService.player.image}}" alt="loading..."> -->
             <div class="box-content">
-                <div class="title">{{ttfService.player.name}} | {{ttfService.player.nickName}}</div>
+                <div class="title">{{ttfService.player.name}} | <span class="nickName">{{ttfService.player.nickName}}</span></div>
                 <p class="card-post-question-item" *ngFor="let question of ttfService.player.questions">
                     <label class="desc" for="{{question.id}}" [ngClass]="{'checked': isChecked, 'red': !question.correct}">
                         {{question.label}}: "{{question.content}}"</label>

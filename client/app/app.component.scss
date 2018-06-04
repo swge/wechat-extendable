@@ -1,87 +1,137 @@
-@import '../../node_modules/font-awesome/css/font-awesome.min.css';
+@import '~font-awesome/css/font-awesome.min.css';
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 @import url(https://fonts.googleapis.com/css?family=Acme);
 @import '../assets/sass/media.query';
+// $fa-font-path : '~font-awesome/fonts';
+// @import '~font-awesome/scss/font-awesome.scss';
 
-h1, h2, h3, h4 {
-    color: #EBEBEB;
-    text-align: center;
+h1,
+h2,
+h3,
+h4 {
+  color: #EBEBEB;
+  text-align: center;
 }
-body{
-    background: #EAEBED url(../assets/img/bg-00.gif) repeat fixed 0% 0%;
+
+body {
+  //background: #EAEBED url(../assets/img/bg-00.gif) repeat fixed 0% 0%;
 }
-.wrapper{
-    font-family: 'Quicksand', cursive;
-    position: absolute;
-    left: 0;
+
+// ::ng-deep {
+.wrapper {
+  font-family: 'Quicksand', cursive;
+  position: absolute;
+  left: 0;
+  top: 0;
+  // background: linear-gradient(122deg, transparent, #52489C), linear-gradient(32deg, #F45B69, #59C3C3);
+  justify-content: flex-start;
+  // background-image: url(../assets/img/intro-1.jpg);
+  background-image: url("../assets/img/img-3.jpg");
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  background-repeat: repeat-y;
+  background-position: 50% 0;
+  background-size: cover;
+
+  &:before {
     top: 0;
-   // background: linear-gradient(122deg, transparent, #52489C), linear-gradient(32deg, #F45B69, #59C3C3);
-    justify-content: flex-start;
-    // background-image: url(../assets/img/intro-1.jpg);
-    background-image: url(../assets/img/img-3.jpg);
-    min-height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    background-attachment: fixed;
-    background-repeat: repeat-y;
-    background-position: 50% 0;
-    background-size: cover;
-    &:before {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: " ";
-        position: absolute;
-        background: url(../assets/img/gridtile.png) repeat;
-    }
-    #home_ttf{
-        position: relative;
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 14px;
-        line-height: 1.42857143;
-        color: #fff;
-        .ttf-title{
-            text-align: center;
-            margin: auto;
-            .title-img{
-                text-align: center;               
-                margin: auto;
-                margin-top: 20px;
-                width: 50%;
-            }
-            h1{
-                font-size: calc(2rem + 4vw);
-                position: relative;
-                margin: 1em 0;
-                &:after {
-                    content: '';
-                    position: absolute;
-                    bottom: 10%;
-                    left: 0;
-                    right: 0;
-                    height: 20%;
-                    background: #F45B69;
-                    z-index: -1;
-                    opacity: 0.9;
-                }
-            }
-        }
-    }
-    .qr-code{
-        position: absolute;
-        height: 150px;
-        left: 80px;
-        top: 80px;
-        z-index: 9999;
-        @media #{$medium} {
-          display: none;
-        }
-    }
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: " ";
+    position: absolute;
+    background: url("../assets/img/gridtile.png") repeat;
+  }
 
-    .pit-container{
+  #home_ttf {
+    position: relative;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+
+    .ttf-title {
+      text-align: center;
+      margin: auto;
+
+      .title-img {
+        text-align: center;
+        margin: 20px auto auto;
+        width: 50%;
+      }
+
+      h1 {
+        font-size: calc(2rem + 4vw);
         position: relative;
+        margin: 1em 0;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 10%;
+          left: 0;
+          right: 0;
+          height: 20%;
+          background: #F45B69;
+          z-index: -1;
+          opacity: .9;
+        }
+      }
     }
+  }
+
+  .qr-code {
+    position: absolute;
+    height: 150px;
+    left: 80px;
+    top: 80px;
+    z-index: 9999;
+    @media #{$medium} {
+      display: none;
+    }
+  }
+
+  .pit-container {
+    position: relative;
+  }
 }
 
+.btn {
+  outline: none;
+  width: 150px;
+  height: 60px;
+  font-family: inherit;
+  margin: 5px;
+  padding: 5px;
+  display: table;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: .8;
+  background: lighten(#F45B69, 2%);
+  border: 1px solid darken(#F45B69, 10%);
+  box-shadow: 0 2px 0 darken(#F45B69, 10%), 2px 4px 1px darken(#F45B69, 5%), 0 0 25px rgba(0,0,0,0.1);
+  letter-spacing: 1px;
+  transition: all .1s;
+  margin: 1rem auto;
+
+  &:hover {
+    background: lighten(#F45B69, 2%);
+    box-shadow: 2px 4px 3px darken(#F45B69, 10%), 4px 4px 18px darken(#F45B69, 5%);
+  }
+
+  &:active {
+    background: darken(#F45B69, 5%);
+    border: 1px solid rgba(#000, .05);
+    box-shadow: 1px 1px 2px rgba(#fff, .2);
+  }
+
+  p {
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    margin: auto;
+  }
+}

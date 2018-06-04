@@ -14,6 +14,8 @@ var pitRouter = require('./routes/pit');
 var ttfRouter = require('./routes/ttf');
 var questionPlayerRouter = require('./routes/qustionPlayer');
 
+var playerRouter = require('./routes/player-route');
+
 var winston = require('winston');
 var fs = require('fs');
 var path = require('path');
@@ -73,6 +75,7 @@ app.use('/', indexRouter);
 app.use('/pit', pitRouter);
 app.use('/ttf', ttfRouter);
 app.use('/questions', questionPlayerRouter);
+app.use('/api/players', playerRouter);
 
 app.all('*', function(req, res) {
     res.status(200).render(path.join(__dirname, 'views/index.hbs'));

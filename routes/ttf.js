@@ -17,4 +17,8 @@ router.get('/final-score', function (req, res, next) {
     }));
 });
 
+router.post('/add-player', function (req, res, next) {
+
+});
+
 module.exports = router;
