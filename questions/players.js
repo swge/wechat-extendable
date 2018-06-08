@@ -1,66 +1,66 @@
 module.exports = [
     {
-        name: 'Ammy Li',
-        nickName: 'Ammy',
-        image: '/stgw/digital/wechat/dist/assets/ammy.jpg',
+        name: 'Kenneth Liang',
+        nickName: 'Kenneth',
+        image: '/stgw/digital/wechat/dist/assets/Kenneth.jpg',
         questions: [
-            {'label': 'a', 'content': '桌式足球比赛', 'correct': false},
-            {'label': 'b', 'content': '撞电线杆', 'correct': true},
-            {'label': 'c', 'content': '曾经养过一只小泰迪', 'correct': true}
-        ],
-        correctQuestion: 'a',
-        rightAnswers: {},
-        wrongAnswers: {}
-    },
-    {
-        name: 'Elaine He',
-        nickName: 'Elaine',
-        image: '/stgw/digital/wechat/dist/assets/elaine.jpg',
-        questions: [
-            {'label': 'a', 'content': '我养了一个小狗，但是每次吃饭的时候会发很大很大很大的脾气。一边生气一边吃', 'correct': false},
-            {'label': 'b', 'content': '去泰国普吉岛的时候，因为我不能下水，爸爸为了体现父爱空手去拿海胆 结果感染得了一场大病', 'correct': true},
-            {'label': 'c', 'content': '我练了几年的瑜伽 ，现在可以倒立了', 'correct': true}
-        ],
-        correctQuestion: 'a',
-        rightAnswers: {},
-        wrongAnswers: {}
-    },
-    {
-        name: 'Frank Feng',
-        nickName: 'Frank',
-        image: '/stgw/digital/wechat/dist/assets/frank.jpg',
-        questions: [
-            {'label': 'a', 'content': '浮潜', 'correct': true},
-            {'label': 'b', 'content': '旅顺长大', 'correct': true},
-            {'label': 'c', 'content': '广州旅游', 'correct': false}
+            {'label': 'a', 'content': 'Go', 'correct': true},
+            {'label': 'b', 'content': 'Yunnan', 'correct': true},
+            {'label': 'c', 'content': 'Irish food', 'correct': false}
         ],
         correctQuestion: 'c',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Michelle Zhang',
-        nickName: '小红',
-        image: '/stgw/digital/wechat/dist/assets/michelle.jpg',
+        name: 'Jeff Wang',
+        nickName: 'Jeff',
+        image: '/stgw/digital/wechat/dist/assets/Jeff.jpg',
         questions: [
-            {'label': 'a', 'content':'I killed a dog, cruelly', 'correct': true},
-            {'label': 'b', 'content': 'Me, piano and band', 'correct': false},
-            {'label': 'c', 'content': '一站式购物', 'correct': true}
+            {'label': 'a', 'content': '屋顶', 'correct': false},
+            {'label': 'b', 'content': '黑板', 'correct': true},
+            {'label': 'c', 'content': '小野 与 小蛮', 'correct': true}
         ],
-        correctQuestion: 'b',
+        correctQuestion: 'a',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Kevin Ge',
-        nickName: 'KG',
-        image: '/stgw/digital/wechat/dist/assets/kevin.jpg',
+        name: 'Helen Liu',
+        nickName: 'Helen',
+        image: '/stgw/digital/wechat/dist/assets/Helen.jpg',
         questions: [
-            {'label': 'a', 'content': '虾片', 'correct': false},
-            {'label': 'b', 'content': '严肃脸', 'correct': true},
-            {'label': 'c', 'content': '考大学', 'correct': true}
+            {'label': 'a', 'content': '头倒立', 'correct': false},
+            {'label': 'b', 'content': '意念', 'correct': true},
+            {'label': 'c', 'content': '金耳环', 'correct': true}
         ],
         correctQuestion: 'a',
+        rightAnswers: {},
+        wrongAnswers: {}
+    },
+    {
+        name: 'Saber Sun',
+        nickName: 'Saber',
+        image: '/stgw/digital/wechat/dist/assets/Saber.jpg',
+        questions: [
+            {'label': 'a', 'content':'Injured', 'correct': false},
+            {'label': 'b', 'content': 'Bad guy', 'correct': true},
+            {'label': 'c', 'content': 'Star', 'correct': true}
+        ],
+        correctQuestion: 'a',
+        rightAnswers: {},
+        wrongAnswers: {}
+    },
+    {
+        name: 'Molly Liu',
+        nickName: 'Molly',
+        image: '/stgw/digital/wechat/dist/assets/Molly.jpg',
+        questions: [
+            {'label': 'a', 'content': '挂急诊', 'correct': true},
+            {'label': 'b', 'content': '被鸡追', 'correct': false},
+            {'label': 'c', 'content': '骨折', 'correct': true}
+        ],
+        correctQuestion: 'b',
         rightAnswers: {},
         wrongAnswers: {}
     }
