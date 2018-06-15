@@ -1,14 +1,14 @@
 module.exports = [
     {
-        name: 'Kenneth Liang',
-        nickName: 'Kenneth',
-        image: '/stgw/digital/wechat/dist/assets/Kenneth.jpg',
+        name: 'Susan Sun',
+        nickName: 'Susan',
+        image: '/stgw/digital/wechat/dist/assets/Susan.jpg',
         questions: [
-            {'label': 'a', 'content': 'Go', 'correct': true},
-            {'label': 'b', 'content': 'Yunnan', 'correct': true},
-            {'label': 'c', 'content': 'Irish food', 'correct': false}
+            {'label': 'a', 'content': '水缸', 'correct': true},
+            {'label': 'b', 'content': '数学老师', 'correct': false},
+            {'label': 'c', 'content': '汉语拼音', 'correct': true}
         ],
-        correctQuestion: 'c',
+        correctQuestion: 'b',
         rightAnswers: {},
         wrongAnswers: {}
     },
