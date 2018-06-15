@@ -13,52 +13,52 @@ module.exports = [
         wrongAnswers: {}
     },
     {
-        name: 'Jeff Wang',
-        nickName: 'Jeff',
-        image: '/stgw/digital/wechat/dist/assets/Jeff.jpg',
+        name: 'Nicole Zhang',
+        nickName: 'Nicole',
+        image: '/stgw/digital/wechat/dist/assets/Nicole.png',
         questions: [
-            {'label': 'a', 'content': '屋顶', 'correct': false},
-            {'label': 'b', 'content': '黑板', 'correct': true},
-            {'label': 'c', 'content': '小野 与 小蛮', 'correct': true}
+            {'label': 'a', 'content': '迷路', 'correct': true},
+            {'label': 'b', 'content': '诈骗', 'correct': false},
+            {'label': 'c', 'content': '晕倒', 'correct': true}
+        ],
+        correctQuestion: 'b',
+        rightAnswers: {},
+        wrongAnswers: {}
+    },
+    {
+        name: 'Neo Wang',
+        nickName: 'Neo',
+        image: '/stgw/digital/wechat/dist/assets/Neo.jpg',
+        questions: [
+            {'label': 'a', 'content': '走回家', 'correct': false},
+            {'label': 'b', 'content': '减肥', 'correct': true},
+            {'label': 'c', 'content': '输入法', 'correct': true}
         ],
         correctQuestion: 'a',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Helen Liu',
-        nickName: 'Helen',
-        image: '/stgw/digital/wechat/dist/assets/Helen.jpg',
+        name: 'Francis Li',
+        nickName: 'Francis',
+        image: '/stgw/digital/wechat/dist/assets/Francis.jpg',
         questions: [
-            {'label': 'a', 'content': '头倒立', 'correct': false},
-            {'label': 'b', 'content': '意念', 'correct': true},
-            {'label': 'c', 'content': '金耳环', 'correct': true}
+            {'label': 'a', 'content':'Safe', 'correct': true},
+            {'label': 'b', 'content': 'Newspaper', 'correct': true},
+            {'label': 'c', 'content': 'Dating', 'correct': false}
         ],
-        correctQuestion: 'a',
+        correctQuestion: 'c',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Saber Sun',
-        nickName: 'Saber',
-        image: '/stgw/digital/wechat/dist/assets/Saber.jpg',
+        name: 'Jackiy Huang',
+        nickName: 'Jackiy',
+        image: '/stgw/digital/wechat/dist/assets/Jackiy.jpg',
         questions: [
-            {'label': 'a', 'content':'Injured', 'correct': false},
-            {'label': 'b', 'content': 'Bad guy', 'correct': true},
-            {'label': 'c', 'content': 'Star', 'correct': true}
-        ],
-        correctQuestion: 'a',
-        rightAnswers: {},
-        wrongAnswers: {}
-    },
-    {
-        name: 'Molly Liu',
-        nickName: 'Molly',
-        image: '/stgw/digital/wechat/dist/assets/Molly.jpg',
-        questions: [
-            {'label': 'a', 'content': '挂急诊', 'correct': true},
-            {'label': 'b', 'content': '被鸡追', 'correct': false},
-            {'label': 'c', 'content': '骨折', 'correct': true}
+            {'label': 'a', 'content': '9毛', 'correct': true},
+            {'label': 'b', 'content': '鼠标', 'correct': false},
+            {'label': 'c', 'content': '家教', 'correct': true}
         ],
         correctQuestion: 'b',
         rightAnswers: {},
