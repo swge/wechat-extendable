@@ -1,66 +1,66 @@
 module.exports = [
     {
-        name: 'Barry Xue',
-        nickName: 'Barry',
-        image: '/stgw/digital/wechat/dist/assets/Barry.jpg',
+        name: 'Jim Jin',
+        nickName: '金金',
+        image: '/stgw/digital/wechat/dist/assets/Jim.jpg',
         questions: [
-            {'label': 'a', 'content': 'hobby: ping pang sport', 'correct': true},
-            {'label': 'b', 'content': 'have a daughter with 8 years old', 'correct': true},
-            {'label': 'c', 'content': 'like small animals and have a pet (chihuahua dog)', 'correct': false}
+            {'label': 'a', 'content': '名字', 'correct': true},
+            {'label': 'b', 'content': '跳高', 'correct': true},
+            {'label': 'c', 'content': '小学', 'correct': false}
         ],
         correctQuestion: 'c',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Linda Wang',
-        nickName: 'Linda',
-        image: '/stgw/digital/wechat/dist/assets/Linda.jpg',
+        name: 'Ivan Li',
+        nickName: '饼子',
+        image: '/stgw/digital/wechat/dist/assets/Ivan.jpg',
         questions: [
-            {'label': 'a', 'content': '毕业后最穷一天', 'correct': false},
-            {'label': 'b', 'content': '学科专业以及职业的选择', 'correct': true},
-            {'label': 'c', 'content': '唯一一次挂科经历', 'correct': true}
-        ],
-        correctQuestion: 'a',
-        rightAnswers: {},
-        wrongAnswers: {}
-    },
-    {
-        name: 'Ally Xu',
-        nickName: 'Ally',
-        image: '/stgw/digital/wechat/dist/assets/Ally.jpg',
-        questions: [
-            {'label': 'a', 'content': '学会游泳', 'correct': false},
-            {'label': 'b', 'content': '七年之痒', 'correct': true},
-            {'label': 'c', 'content': '留长发', 'correct': true}
-        ],
-        correctQuestion: 'a',
-        rightAnswers: {},
-        wrongAnswers: {}
-    },
-    {
-        name: 'Nylon Gao',
-        nickName: 'Nylon',
-        image: '/stgw/digital/wechat/dist/assets/Nylon.jpg',
-        questions: [
-            {'label': 'a', 'content':'Brick', 'correct': true},
-            {'label': 'b', 'content': 'Love', 'correct': false},
-            {'label': 'c', 'content': 'King', 'correct': true}
+            {'label': 'a', 'content': '面霸120', 'correct': true},
+            {'label': 'b', 'content': '宠物达人', 'correct': false},
+            {'label': 'c', 'content': '神奇的左手', 'correct': true}
         ],
         correctQuestion: 'b',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Effy Zhang',
-        nickName: 'Effy',
-        image: '/stgw/digital/wechat/dist/assets/person-default.png',
+        name: 'Robin Fu',
+        nickName: '肉饼',
+        image: '/stgw/digital/wechat/dist/assets/Robin.jpg',
         questions: [
-            {'label': 'a', 'content': '甜甜圈', 'correct': true},
-            {'label': 'b', 'content': '猪队友', 'correct': true},
-            {'label': 'c', 'content': '螳螂捕蝉黄雀在后', 'correct': false}
+            {'label': 'a', 'content': '婴儿肥', 'correct': true},
+            {'label': 'b', 'content': '音乐', 'correct': false},
+            {'label': 'c', 'content': '啤酒', 'correct': true}
         ],
-        correctQuestion: 'c',
+        correctQuestion: 'b',
+        rightAnswers: {},
+        wrongAnswers: {}
+    },
+    {
+        name: 'Trent Liu',
+        nickName: '刘智斌',
+        image: '/stgw/digital/wechat/dist/assets/Trent.jpg',
+        questions: [
+            {'label': 'a', 'content':'池塘', 'correct': true},
+            {'label': 'b', 'content': '挨揍', 'correct': false},
+            {'label': 'c', 'content': '自行车', 'correct': true}
+        ],
+        correctQuestion: 'b',
+        rightAnswers: {},
+        wrongAnswers: {}
+    },
+    {
+        name: 'Summer Yang',
+        nickName: '杨晶舒',
+        image: '/stgw/digital/wechat/dist/assets/Summer.png',
+        questions: [
+            {'label': 'a', 'content': '地震', 'correct': false},
+            {'label': 'b', 'content': '恐怖片', 'correct': true},
+            {'label': 'c', 'content': '小偷', 'correct': true}
+        ],
+        correctQuestion: 'a',
         rightAnswers: {},
         wrongAnswers: {}
     }
