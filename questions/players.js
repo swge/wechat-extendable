@@ -43,7 +43,7 @@ module.exports = [
         nickName: '王莹',
         image: '/stgw/digital/wechat/dist/assets/Spencer.jpg',
         questions: [
-            {'label': 'a', 'content':'15 hours', 'correct': false},
+            {'label': 'a', 'content':'18 hours', 'correct': false},
             {'label': 'b', 'content': 'First Love', 'correct': true},
             {'label': 'c', 'content': 'Ammunition', 'correct': true}
         ],
