@@ -1,64 +1,64 @@
 module.exports = [
     {
-        name: 'Jim Jin',
-        nickName: '金金',
-        image: '/stgw/digital/wechat/dist/assets/Jim.jpg',
+        name: 'Bonnie Bai',
+        nickName: '白小利',
+        image: '/stgw/digital/wechat/dist/assets/Bonnie.jpg',
         questions: [
-            {'label': 'a', 'content': '名字', 'correct': true},
-            {'label': 'b', 'content': '跳高', 'correct': true},
-            {'label': 'c', 'content': '小学', 'correct': false}
+            {'label': 'a', 'content': 'Losing', 'correct': true},
+            {'label': 'b', 'content': 'Sleeping', 'correct': true},
+            {'label': 'c', 'content': 'Running', 'correct': false}
         ],
         correctQuestion: 'c',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Ivan Li',
-        nickName: '饼子',
-        image: '/stgw/digital/wechat/dist/assets/Ivan.jpg',
+        name: 'Kate Chen',
+        nickName: '陈晓卉',
+        image: '/stgw/digital/wechat/dist/assets/Kate.jpg',
         questions: [
-            {'label': 'a', 'content': '面霸120', 'correct': true},
-            {'label': 'b', 'content': '宠物达人', 'correct': false},
-            {'label': 'c', 'content': '神奇的左手', 'correct': true}
+            {'label': 'a', 'content': 'Redecoration', 'correct': true},
+            {'label': 'b', 'content': 'Homework', 'correct': false},
+            {'label': 'c', 'content': 'Name', 'correct': true}
         ],
         correctQuestion: 'b',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Robin Fu',
-        nickName: '肉饼',
-        image: '/stgw/digital/wechat/dist/assets/Robin.jpg',
+        name: 'Larry Zhang',
+        nickName: '张悦',
+        image: '/stgw/digital/wechat/dist/assets/Larry.jpg',
         questions: [
-            {'label': 'a', 'content': '婴儿肥', 'correct': true},
-            {'label': 'b', 'content': '音乐', 'correct': false},
-            {'label': 'c', 'content': '啤酒', 'correct': true}
+            {'label': 'a', 'content': 'Weight', 'correct': false},
+            {'label': 'b', 'content': 'Lawsuit', 'correct': true},
+            {'label': 'c', 'content': 'Sorehead', 'correct': true}
         ],
-        correctQuestion: 'b',
+        correctQuestion: 'a',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Trent Liu',
-        nickName: '刘智斌',
-        image: '/stgw/digital/wechat/dist/assets/Trent.jpg',
+        name: 'Spencer Wang',
+        nickName: '王莹',
+        image: '/stgw/digital/wechat/dist/assets/Spencer.jpg',
         questions: [
-            {'label': 'a', 'content':'池塘', 'correct': true},
-            {'label': 'b', 'content': '挨揍', 'correct': false},
-            {'label': 'c', 'content': '自行车', 'correct': true}
+            {'label': 'a', 'content':'15 hours', 'correct': false},
+            {'label': 'b', 'content': 'First Love', 'correct': true},
+            {'label': 'c', 'content': 'Ammunition', 'correct': true}
         ],
-        correctQuestion: 'b',
+        correctQuestion: 'a',
         rightAnswers: {},
         wrongAnswers: {}
     },
     {
-        name: 'Summer Yang',
-        nickName: '杨晶舒',
-        image: '/stgw/digital/wechat/dist/assets/Summer.png',
+        name: 'Terry Wang',
+        nickName: '王宇哲',
+        image: '/stgw/digital/wechat/dist/assets/Terry.jpg',
         questions: [
-            {'label': 'a', 'content': '地震', 'correct': false},
-            {'label': 'b', 'content': '恐怖片', 'correct': true},
-            {'label': 'c', 'content': '小偷', 'correct': true}
+            {'label': 'a', 'content': 'Soccer 1', 'correct': false},
+            {'label': 'b', 'content': 'Soccer 2', 'correct': true},
+            {'label': 'c', 'content': 'Soccer 3', 'correct': true}
         ],
         correctQuestion: 'a',
         rightAnswers: {},
