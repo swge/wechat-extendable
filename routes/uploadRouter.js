@@ -64,8 +64,8 @@ router.post('/', multer(multerConfig).single('avator'), function (req, res) {
         let player = Object.create(null);
         player.name = req.body.firstName + ' ' + req.body.lastName;
         player.nickName = req.body.nickName;
-        player.rightAnswers = Object.create(null);
-        player.wrongAnswers = Object.create(null);
+        player.rightAnswers = {};
+        player.wrongAnswers = {};
         updatePlayer(req, ext, player);
         dataObj.push(player);
     }
