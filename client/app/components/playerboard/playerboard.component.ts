@@ -59,7 +59,7 @@ export class PlayerBoardComponent implements OnInit, OnDestroy{
         // this.ttfService.resetPlayers();
         // this.loaded = false;
         let id = ++this.playerID;
-        if(id < 5){
+        if(id < 6){
             this.router.navigateByUrl('playerboard/'+ id);
             this.ttfService.getPlayerById(id)
         }

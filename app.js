@@ -13,11 +13,13 @@ var indexRouter = require('./routes/index');
 var pitRouter = require('./routes/pit');
 var ttfRouter = require('./routes/ttf');
 var questionPlayerRouter = require('./routes/qustionPlayer');
+var uploadRouter = require('./routes/uploadRouter');
 
 var winston = require('winston');
 var fs = require('fs');
 var path = require('path');
 var moment = require('moment');
+var bodyParser = require('body-parser');
 
 var logDirectory = path.join(__dirname, 'log')
 
@@ -56,6 +58,7 @@ app.set('view engine', 'hbs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(bodyParser.json());
 app.use('/pit', xmlParser({explicitArray: false}));
 app.use(envConfig.STGW_URL, express.static(path.join(__dirname, 'public')));
 
@@ -65,7 +68,7 @@ app.users = {};
 //add app to request
 app.use('/', function(req, res, next) {
     req.app = app;
-    winston.log('info',req.body);
+    winston.log('path: ', req);
     next();
 });
 
@@ -73,6 +76,7 @@ app.use('/', indexRouter);
 app.use('/pit', pitRouter);
 app.use('/ttf', ttfRouter);
 app.use('/questions', questionPlayerRouter);
+app.use('/upload', uploadRouter);
 
 app.all('*', function(req, res) {
     res.status(200).render(path.join(__dirname, 'views/index.hbs'));

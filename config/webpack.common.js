@@ -10,7 +10,8 @@ module.exports = {
     entry: {
         'polyfills': './client/polyfills.ts',
         // 'vendor': './client/vendor.ts',
-        'app': './client/main.ts'
+        'app': './client/main.ts',
+        'upload': './client/upload.ts'
     },
 
     resolve: {
@@ -55,7 +56,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin([
             'public',
-            'views/index.hbs'
+            'views/index.hbs',
+            'views/upload.hbs'
         ], {
             root: helpers.root()
         }),
@@ -69,9 +71,15 @@ module.exports = {
         ),
 
         new HtmlWebpackPlugin({
-            inject: true,
+            inject: false,
             template: 'views/index.tpl',
             filename: helpers.root('views', 'index.hbs')
+        }),
+
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: 'views/upload.tpl',
+            filename: helpers.root('views', 'upload.hbs')
         }),
 
         new CopyWebpackPlugin([
