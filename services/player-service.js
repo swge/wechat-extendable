@@ -8,7 +8,7 @@ module.exports = {
         var jsonString = fs.readFileSync(jsonPath, 'utf8');
         // console.log('json: ' + jsonString);
         var allPlayers = JSON.parse(jsonString);
-        var players = allPlayers.slice(allPlayers.length - 6);
+        var players = allPlayers.slice(allPlayers.length - 5);
         if(index > players.length -1) {
             return undefined;
         }
@@ -26,7 +26,7 @@ module.exports = {
         var jsonPath = path.join(__dirname, '..', 'questions', 'players.json');
         var jsonString = fs.readFileSync(jsonPath, 'utf8');
         var allPlayers = JSON.parse(jsonString);
-        var players = allPlayers.slice(allPlayers.length - 6);
+        var players = allPlayers.slice(allPlayers.length - 5);
 
         return players;
     } 
