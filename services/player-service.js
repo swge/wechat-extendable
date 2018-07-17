@@ -13,6 +13,15 @@ module.exports = {
             return undefined;
         }
 
+        for (const iter of allPlayers) {
+            if (iter.name === app.currentQuestionPlayer.name && iter.nickName === app.currentQuestionPlayer.nickName) {
+                iter.rightAnswers = {...iter.rightAnswers, ...app.currentQuestionPlayer.rightAnswers};
+                iter.wrongAnswers = {...iter.wrongAnswers, ...app.currentQuestionPlayer.wrongAnswers};
+                break;                
+            }
+        }
+        fs.writeFileSync(jsonPath, JSON.stringify(allPlayers), 'utf8');
+
         app.questionGameData.active = true;
         let player = players[index];
         //previous player exists
