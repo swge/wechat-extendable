@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var envConfig = require('../config/env.config');
 const path = require('path');
+var fs = require('fs');
 
 /* Weixin validation */
 router.get('/round-winners', function (req, res, next) {
