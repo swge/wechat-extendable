@@ -13,6 +13,7 @@ module.exports = {
             return undefined;
         }
 
+        console.log('app.currentQuestionPlayer: ' + app.currentQuestionPlayer);
         for (const iter of allPlayers) {
             if (iter.name === app.currentQuestionPlayer.name && iter.nickName === app.currentQuestionPlayer.nickName) {
                 iter.rightAnswers = {...iter.rightAnswers, ...app.currentQuestionPlayer.rightAnswers};
