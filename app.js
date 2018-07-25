@@ -16,25 +16,26 @@ var questionPlayerRouter = require('./routes/qustionPlayer');
 var uploadRouter = require('./routes/uploadRouter');
 
 var winston = require('winston');
+require('winston-daily-rotate-file');
 var fs = require('fs');
 var path = require('path');
 var moment = require('moment');
 var bodyParser = require('body-parser');
 
-var logDirectory = path.join(__dirname, 'log')
-
-if (!fs.existsSync(logDirectory)) {
-    fs.mkdirSync(logDirectory);
-}
-winston.add(winston.transports.File, {
-    filename: path.join(logDirectory, '/events.log'),
-    timestamp: () => {
-        return moment().format('MM-DD hh:mm:ss')
-    },
-    // 5MB
-    maxsize: 5242880
-});
-
+const myFormat = winston.format.printf(info => {
+    return `${info.timestamp}: ${info.message}`;
+})
+winston.add(new (winston.transports.DailyRotateFile)({
+    filename: 'application-%DATE%.log',
+    maxSize: '5m',
+    maxFiles: '7d',
+    dirname: 'log',
+    format: winston.format.combine(
+        winston.format.timestamp(),
+        winston.format.prettyPrint(),
+        myFormat
+    )
+}));
 
 var app = express();
 
@@ -42,14 +43,7 @@ var app = express();
 logger.token('requestBody', function(req, res) {
     return req.body.xml;
 });
-// create a rotating write stream
-var accessLogStream = rfs('access.log', {
-  maxFiles: 10, // rotate daily
-  maxSize: '5M',
-  path: logDirectory
-})
 
-app.use(logger(':method :url :response-time :requestBody', {stream: accessLogStream}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -68,7 +62,6 @@ app.users = {};
 //add app to request
 app.use('/', function(req, res, next) {
     req.app = app;
-    winston.log('path: ', req);
     next();
 });
 
