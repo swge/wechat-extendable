@@ -42,4 +42,14 @@ export class TTFService {
                 this.player = data;
             })
     }
+
+    /**
+     * getRandomPlayer
+     */
+    public getRandomPlayer() {
+        this.httpClient.get('/random')
+            .subscribe((data: any) => {
+                this.player = data;
+            })
+    }
 }

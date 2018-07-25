@@ -24,6 +24,19 @@ module.exports = {
         app.currentQuestionPlayer = player;
         return player;
     },
+    loadRandomPlayer: (app) => {
+        const jsonPath = path.join(__dirname, '..', 'questions', 'players.json');
+        const jsonString = fs.readFileSync(jsonPath, 'utf8');
+        const allPlayers = JSON.parse(jsonString);
+        const index = Math.floor(Math.random() * Math.floor(allPlayers.length - 5));
+        app.questionGameData.active = true;
+        let player = allPlayers[index];
+        if(app.currentQuestionPlayer) {
+            app.questionGameData[app.currentQuestionPlayer.name] = app.currentQuestionPlayer;
+        }
+        app.currentQuestionPlayer = player;
+        return player;
+    },
     getAllPlayer:(app) => {
         var jsonPath = path.join(__dirname, '..', 'questions', 'players.json');
         var jsonString = fs.readFileSync(jsonPath, 'utf8');

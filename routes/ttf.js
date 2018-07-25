@@ -12,7 +12,6 @@ router.get('/round-winners', function (req, res, next) {
         const jsonString = fs.readFileSync(jsonPath, 'utf8');
         const allPlayers = JSON.parse(jsonString);
         const currentQuestionPlayer = req.app.currentQuestionPlayer;
-        console.log('currentQuestionPlayer: ' + currentQuestionPlayer);
         for (const iter of allPlayers) {
             if (iter.name === currentQuestionPlayer.name && iter.nickName === currentQuestionPlayer.nickName) {
                 iter.rightAnswers = {...iter.rightAnswers, ...currentQuestionPlayer.rightAnswers};

@@ -16,6 +16,7 @@ export class PlayerBoardComponent implements OnInit, OnDestroy{
     notEnabled: boolean = true;
     playerID: number = 0;
     loaded: boolean = false;
+    standaloneMode:boolean = false;
 
     constructor(
         private router: Router,
@@ -44,8 +45,14 @@ export class PlayerBoardComponent implements OnInit, OnDestroy{
         // this.ttfService.resetRoundWinners();
         // this.ttfService.resetPlayers();
         // this.loaded = false;
-        this.playerID = Number(this.activeRoute.snapshot.paramMap.get('id'));
-        this.ttfService.getPlayerById(this.playerID);
+        const tempId = this.activeRoute.snapshot.paramMap.get('id');
+        if (tempId === 'random') {
+            this.standaloneMode = true;
+            this.ttfService.getRandomPlayer();
+        } else {
+            this.playerID = Number(this.activeRoute.snapshot.paramMap.get('id'));
+            this.ttfService.getPlayerById(this.playerID);
+        }
     }
     public showAnswer(): void {
         this.ttfService.resetRoundWinners();
@@ -66,6 +73,15 @@ export class PlayerBoardComponent implements OnInit, OnDestroy{
         else{
             this.router.navigateByUrl('scoreboard');
         }  
+        this.isChecked = false;
+        this.notEnabled = true;
+    }
+
+    /**
+     * randomQuestion
+     */
+    public randomQuestion() {
+        this.router.navigateByUrl('playerboard/random');
         this.isChecked = false;
         this.notEnabled = true;
     }

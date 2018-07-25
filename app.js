@@ -14,6 +14,7 @@ var pitRouter = require('./routes/pit');
 var ttfRouter = require('./routes/ttf');
 var questionPlayerRouter = require('./routes/qustionPlayer');
 var uploadRouter = require('./routes/uploadRouter');
+var randomPlayerRouter = require('./routes/randomPlayerRouter');
 
 var winston = require('winston');
 require('winston-daily-rotate-file');
@@ -70,6 +71,7 @@ app.use('/pit', pitRouter);
 app.use('/ttf', ttfRouter);
 app.use('/questions', questionPlayerRouter);
 app.use('/upload', uploadRouter);
+app.use('/random', randomPlayerRouter);
 
 app.all('*', function(req, res) {
     res.status(200).render(path.join(__dirname, 'views/index.hbs'));
