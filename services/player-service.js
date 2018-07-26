@@ -1,6 +1,7 @@
 // var players = require('../questions/players');
 var fs = require('fs');
 var path = require('path');
+const numOfPlayers = process.env.numOfPlayers || 5;
 
 module.exports = {
     loadPlayer: (app, index) => {
@@ -8,7 +9,7 @@ module.exports = {
         var jsonString = fs.readFileSync(jsonPath, 'utf8');
         // console.log('json: ' + jsonString);
         var allPlayers = JSON.parse(jsonString);
-        var players = allPlayers.slice(allPlayers.length - 5);
+        var players = allPlayers.slice(allPlayers.length - numOfPlayers);
         if(index > players.length -1) {
             return undefined;
         }
@@ -28,7 +29,7 @@ module.exports = {
         const jsonPath = path.join(__dirname, '..', 'questions', 'players.json');
         const jsonString = fs.readFileSync(jsonPath, 'utf8');
         const allPlayers = JSON.parse(jsonString);
-        const index = Math.floor(Math.random() * Math.floor(allPlayers.length - 5));
+        const index = Math.floor(Math.random() * Math.floor(allPlayers.length - numOfPlayers));
         app.questionGameData.active = true;
         let player = allPlayers[index];
         if(app.currentQuestionPlayer) {
@@ -41,7 +42,7 @@ module.exports = {
         var jsonPath = path.join(__dirname, '..', 'questions', 'players.json');
         var jsonString = fs.readFileSync(jsonPath, 'utf8');
         var allPlayers = JSON.parse(jsonString);
-        var players = allPlayers.slice(allPlayers.length - 5);
+        var players = allPlayers.slice(allPlayers.length - numOfPlayers);
 
         return players;
     } 

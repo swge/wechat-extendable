@@ -31,4 +31,9 @@ router.get('/final-score', function (req, res, next) {
     }));
 });
 
+router.get('/num', function (req, res, next) {
+    const numOfPlayers = process.env.numOfPlayers || 5;
+    res.json({num: numOfPlayers});
+});
+
 module.exports = router;

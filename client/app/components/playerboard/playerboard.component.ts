@@ -17,6 +17,7 @@ export class PlayerBoardComponent implements OnInit, OnDestroy{
     playerID: number = 0;
     loaded: boolean = false;
     standaloneMode:boolean = false;
+    numOfPlayers:number = 5;
 
     constructor(
         private router: Router,
@@ -45,6 +46,7 @@ export class PlayerBoardComponent implements OnInit, OnDestroy{
         // this.ttfService.resetRoundWinners();
         // this.ttfService.resetPlayers();
         // this.loaded = false;
+        this.ttfService.getNumOfPlayers().subscribe(data => console.log(data['num']));
         const tempId = this.activeRoute.snapshot.paramMap.get('id');
         if (tempId === 'random') {
             this.standaloneMode = true;
@@ -66,7 +68,7 @@ export class PlayerBoardComponent implements OnInit, OnDestroy{
         // this.ttfService.resetPlayers();
         // this.loaded = false;
         let id = ++this.playerID;
-        if(id < 5){
+        if(id < 4){
             this.router.navigateByUrl('playerboard/'+ id);
             this.ttfService.getPlayerById(id)
         }
