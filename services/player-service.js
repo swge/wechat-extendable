@@ -35,6 +35,8 @@ module.exports = {
         if(app.currentQuestionPlayer) {
             app.questionGameData[app.currentQuestionPlayer.name] = app.currentQuestionPlayer;
         }
+        player.rightAnswers = {};
+        player.wrongAnswers = {};
         app.currentQuestionPlayer = player;
         return player;
     },
