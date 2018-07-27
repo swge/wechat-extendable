@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Acme);
 
 .scoreboard__container {
+    text-align: right;
     width: 80%;
     margin:auto;
     margin-bottom: 10%;
@@ -59,6 +60,20 @@
         }
     }
     .must-win {
-        margin-bottom: 10px;
+        background-color: #ffaa40;
+        font-size: 1em;
+        margin: 10px 20px 10px 0;
+        color: white;
+        font-weight: 900;
+        padding: 1em;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 5px 0px 0px #a66615;
+    }
+    .must-win:hover {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        box-shadow: 0px 0px 0px 0px #a66615;
+
     }
 }
