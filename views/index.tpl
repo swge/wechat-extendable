@@ -9,5 +9,7 @@
 </head>
 <body>
     <app>Loading...</app>
+    <script src="<%= htmlWebpackPlugin.files.js[0] %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.js[1] %>"></script>
 </body>
 </html>

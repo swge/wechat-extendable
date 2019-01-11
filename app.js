@@ -13,26 +13,30 @@ var indexRouter = require('./routes/index');
 var pitRouter = require('./routes/pit');
 var ttfRouter = require('./routes/ttf');
 var questionPlayerRouter = require('./routes/qustionPlayer');
+var uploadRouter = require('./routes/uploadRouter');
+var randomPlayerRouter = require('./routes/randomPlayerRouter');
 
 var winston = require('winston');
+require('winston-daily-rotate-file');
 var fs = require('fs');
 var path = require('path');
 var moment = require('moment');
+var bodyParser = require('body-parser');
 
-var logDirectory = path.join(__dirname, 'log')
-
-if (!fs.existsSync(logDirectory)) {
-    fs.mkdirSync(logDirectory);
-}
-winston.add(winston.transports.File, {
-    filename: path.join(logDirectory, '/events.log'),
-    timestamp: () => {
-        return moment().format('MM-DD hh:mm:ss')
-    },
-    // 5MB
-    maxsize: 5242880
-});
-
+const myFormat = winston.format.printf(info => {
+    return `${info.timestamp}: ${info.message}`;
+})
+winston.add(new (winston.transports.DailyRotateFile)({
+    filename: 'application-%DATE%.log',
+    maxSize: '5m',
+    maxFiles: '7d',
+    dirname: 'log',
+    format: winston.format.combine(
+        winston.format.timestamp(),
+        winston.format.prettyPrint(),
+        myFormat
+    )
+}));
 
 var app = express();
 
@@ -40,14 +44,7 @@ var app = express();
 logger.token('requestBody', function(req, res) {
     return req.body.xml;
 });
-// create a rotating write stream
-var accessLogStream = rfs('access.log', {
-  maxFiles: 10, // rotate daily
-  maxSize: '5M',
-  path: logDirectory
-})
 
-app.use(logger(':method :url :response-time :requestBody', {stream: accessLogStream}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -56,6 +53,7 @@ app.set('view engine', 'hbs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(bodyParser.json());
 app.use('/pit', xmlParser({explicitArray: false}));
 app.use(envConfig.STGW_URL, express.static(path.join(__dirname, 'public')));
 
@@ -65,7 +63,6 @@ app.users = {};
 //add app to request
 app.use('/', function(req, res, next) {
     req.app = app;
-    winston.log('info',req.body);
     next();
 });
 
@@ -73,6 +70,8 @@ app.use('/', indexRouter);
 app.use('/pit', pitRouter);
 app.use('/ttf', ttfRouter);
 app.use('/questions', questionPlayerRouter);
+app.use('/upload', uploadRouter);
+app.use('/random', randomPlayerRouter);
 
 app.all('*', function(req, res) {
     res.status(200).render(path.join(__dirname, 'views/index.hbs'));

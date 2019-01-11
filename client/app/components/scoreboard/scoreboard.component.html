@@ -4,8 +4,10 @@
         <user-detail *ngFor="let user of ttfService.finalScore; let i = index" [user]="user" [index]="i + 1"></user-detail>
     </div> -->
 <!-- </div> -->
-
 <div class="scoreboard__container">
+    <button class="must-win" (click)="randomQuestion()">
+        Must-win
+    </button>
     <section>
         <!-- <h1>Final Score</h1> -->
         <div class="tbl-header">

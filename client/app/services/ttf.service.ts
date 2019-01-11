@@ -42,4 +42,21 @@ export class TTFService {
                 this.player = data;
             })
     }
+
+    /**
+     * getRandomPlayer
+     */
+    public getRandomPlayer() {
+        this.httpClient.get('/random')
+            .subscribe((data: any) => {
+                this.player = data;
+            })
+    }
+
+    /**
+     * getNumOfPlayers
+     */
+    public getNumOfPlayers() {
+        return this.httpClient.get('/ttf/num');
+    }
 }

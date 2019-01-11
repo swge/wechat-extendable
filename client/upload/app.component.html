@@ -1,0 +1,93 @@
+<body class="bg-light">
+
+    <!-- <form action=""> -->
+    <div class="container">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="../assets/img/profile.png" alt="" width="72"
+                height="72">
+            <h2>Two Truths and a Lie</h2>
+        </div>
+        <form action="/upload" enctype="multipart/form-data" method="POST" #form>
+            <div>
+                <h4 class="mb-3">Personal Info</h4>
+
+
+                <div class="row">
+
+                    <div class="col-sm mb-3">
+                        <label for="firstName">First Name</label>
+                        <input required minlength="1" class="form-control" type="text" name="firstName" id="firstName" [(ngModel)]="firstName" #name="ngModel">
+                        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                        <label for="lastName">Last Name</label>
+                        <input required minlength="1" class="form-control" type="text" name="lastName" id="lastName" [(ngModel)]="lastName" #lName="ngModel">
+                        <div *ngIf="lName.invalid && (lName.dirty || lName.touched)" class="invalid-feedback">
+                            Valid last name is required.
+                        </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                        <label for="nickName">Nick Name</label>
+                        <input required minlength="1" class="form-control" type="text" name="nickName" id="nickName" [(ngModel)]="nickName" #nName="ngModel">
+                        <div *ngIf="nName.invalid && (nName.dirty || nName.touched)" class="invalid-feedback">
+                            Valid nick name is required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="mb-3">Questions</h4>
+                <div>
+                    <input type="radio" name="answer" id="" value="1">
+                    <input required minlength="1" type="text" name="q1" id="" [(ngModel)]="question1" #q1="ngModel">
+                    <div *ngIf="q1.invalid && (q1.dirty || q1.touched)" class="invalid-feedback">
+                        Question 1 is required
+                    </div>
+                </div>
+                <div>
+                    <input type="radio" name="answer" id="" value="2">
+                    <input required minlength="1" type="text" name="q2" id="" [(ngModel)]="question2" #q2="ngModel">
+                    <div *ngIf="q2.invalid && (q2.dirty || q2.touched)" class="invalid-feedback">
+                        Question 2 is required
+                    </div>
+                </div>
+                <div>
+                    <input type="radio" name="answer" id="" value="3">
+                    <input required minlength="1" type="text" name="q3" id="" [(ngModel)]="question3" #q3="ngModel">
+                    <div *ngIf="q3.invalid && (q3.dirty || q3.touched)" class="invalid-feedback">
+                        Question 3 is required
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <h4 class="mb-3">Photo</h4>
+                <input type="file" name="avator" id="avator">
+            </div>
+        </form>
+
+
+    </div>
+    <hr class="mb-4">
+    <button class="btn btn-primary btn-lg btn-block" type="submit" (click)="form.submit()" >Commit My Questions</button>
+    <!-- </form> -->
+
+    <!-- <form action="/upload" enctype="multipart/form-data" method="POST" #form>
+
+        <div class="section">Note: Only image files are allowed.</div>
+        <div class="inner-wrap">
+            <label>
+                <input type="file" id="photo" name="photo" />
+                <input name="q" value="test">
+                <input name="abc" id="">
+            </label>
+            <div class="button-section">
+                <input type="submit" (click)="form.submit()" name="Upload" value="Upload Photo" />
+            </div>
+        </div>
+
+    </form> -->
+</body>

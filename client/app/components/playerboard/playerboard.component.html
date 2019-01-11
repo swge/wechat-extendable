@@ -16,6 +16,7 @@
                     <ul class="nav-btn">
                         <li><a href="javascript:void(0)" (click)="showAnswer()"><span>Answer</span></a></li>
                         <li><a href="javascript:void(0)" (click)="nextQuestion()" class="nav-btn-next" [class.disabled]="notEnabled" ><span>Next</span></a></li>
+                        <li *ngIf="standaloneMode"><a href="javascript:void(0)" (click)="randomQuestion()" class="nav-btn-next"><span>Random</span></a></li>
                     </ul>
                 </div>
             </div>
